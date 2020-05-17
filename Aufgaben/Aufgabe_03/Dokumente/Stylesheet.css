@@ -1,0 +1,95 @@
+header{
+    border: transparent 5px;
+    border-radius: 0px 0px 500px 500px;
+    background-color: #373F51 ;
+    height: 400px;
+}
+body{
+    background-image: url("bg.png");
+    font-family: sans-serif;
+    width: 800px;
+    text-align: center;
+    margin: 0;
+}
+h1{
+    font-size: 130px;
+    padding-top: 50px;
+    color: #DAA49A;
+    margin: 0;
+}
+h2,h4{
+color: #373F51 ;
+}
+p{
+    font-size: larger;
+    color: #DAA49A;
+}
+.navbar ul{
+    margin-top: 0px;
+    border: transparent 5px;
+    border-radius: 0px 0px 20px 20px;
+    list-style-type: none;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 90%; 
+    padding-left: 0;
+    margin-left: 521px;
+    width: 279px;
+}
+.navbar li a{
+    float: right;
+    color: #373F51;
+    display: block;
+    text-decoration: none;
+    padding: 12px 16px;
+    background-color: #DAA49A;
+    text-align: center;
+}
+.navbar li a:hover{
+    background-color: #D8DBE2;
+}
+.navbar .active{
+    background-color: #D8DBE2;
+}
+#selfie{
+    margin-top: 30px;
+}
+.favs li{
+    text-align: left;
+    font-size: 18px;
+    color: #DAA49A;
+    margin-left: 30px;
+}
+.SocialMediaTags{
+margin-top: 50px;
+display: flex;
+justify-content: space-evenly;
+margin-left: 100px;
+}
+input{
+    margin: 20px;
+}
+form{
+   text-align: right;
+   margin-right: 250px;
+}
+#message{
+    width: 200px;
+    height: 70px;
+}
+#submit{
+    width: 200px;
+    height: 30px;
+}
+#fname{
+    margin-top: 50px;
+}
+.socialLinks b{
+    margin-left: -20px;
+}
+.socialLinks img{
+    margin-bottom: -7px;
+}
+
+
