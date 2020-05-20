@@ -97,5 +97,10 @@ form{
 .socialLinks a :hover{
     opacity: 0.3;
 }
+form p{
+    color: black;
+    font-size: 8px;
+    margin-left: 20px;
+}
 
 
