@@ -1,0 +1,41 @@
+header{
+    
+}
+h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    font-size: 1.7em;
+    position: relative;
+    left: 35px;
+    top: 12px;
+    margin-right: 0px;
+}
+body{
+    width: 600px;
+    margin: 0px;
+}
+.kategorie{
+    display: inline;
+    position: relative;
+    right: 125px;
+    top: 5px;
+}
+nav{
+    background-color: cadetblue;
+    width: 100%;
+}
+.kategorie{
+    background-color: white;
+}
+#Iconcontainer{
+    display: flex;
+    justify-content: space-between;
+}
+.icons{
+   margin-top: 20px;
+}
+#Iconcontainer > img{
+    position: relative;
+    bottom: 75px;
+}
