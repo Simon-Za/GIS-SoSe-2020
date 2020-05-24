@@ -2,14 +2,17 @@ header{
     
 }
 h1{
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     margin-top: 0px;
     font-size: 1.7em;
     position: relative;
-    left: 35px;
+    left: 130px;
     top: 12px;
-    margin-right: 0px;
+}
+h2{
+    margin-top: 40px;
+    text-align: center;
 }
 body{
     width: 600px;
@@ -20,13 +23,11 @@ body{
     position: relative;
     right: 125px;
     top: 5px;
+     padding-top: 3px;
 }
 nav{
-    background-color: cadetblue;
+    background-color: crimson;
     width: 100%;
-}
-.kategorie{
-    background-color: white;
 }
 #Iconcontainer{
     display: flex;
@@ -38,4 +39,32 @@ nav{
 #Iconcontainer > img{
     position: relative;
     bottom: 75px;
+}
+.Produkte img{
+    width: 400px;
+}
+.product{
+    border: 1px black solid;
+    margin-top: 15px;
+}
+.Produkte{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+}
+button{
+    display: inline;
+    position: relative;
+    left:70px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 250px;
+    height: 30px;
+}
+.product p{
+    text-align: center;
+}
+#Iconcontainer a{
+    text-decoration: none;
 }
