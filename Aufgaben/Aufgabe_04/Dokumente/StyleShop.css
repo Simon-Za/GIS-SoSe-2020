@@ -1,70 +1,157 @@
-header{
-    
-}
-h1{
-    display: inline-flex;
-    justify-content: center;
-    margin-top: 0px;
-    font-size: 1.7em;
-    position: relative;
-    left: 130px;
-    top: 12px;
-}
-h2{
-    margin-top: 40px;
-    text-align: center;
-}
-body{
-    width: 600px;
-    margin: 0px;
-}
-.kategorie{
-    display: inline;
-    position: relative;
-    right: 125px;
-    top: 5px;
-     padding-top: 3px;
-}
-nav{
-    background-color: crimson;
-    width: 100%;
-}
-#Iconcontainer{
-    display: flex;
-    justify-content: space-between;
-}
-.icons{
-   margin-top: 20px;
-}
-#Iconcontainer > img{
-    position: relative;
-    bottom: 75px;
-}
-.Produkte img{
-    width: 400px;
-}
-.product{
-    border: 1px black solid;
-    margin-top: 15px;
-}
-.Produkte{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 60px;
-}
-button{
-    display: inline;
-    position: relative;
-    left:70px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 250px;
-    height: 30px;
-}
-.product p{
-    text-align: center;
-}
-#Iconcontainer a{
-    text-decoration: none;
-}
+                        h1 {
+                            display: inline-flex;
+                            justify-content: center;
+                            margin-top: 0px;
+                            font-size: 1.7em;
+                            position: relative;
+                            left: 130px;
+                            top: 12px;
+                        }
+                        
+                        h2 {
+                            margin-top: 40px;
+                            text-align: center;
+                        }
+                        
+                        body {
+                            width: 600px;
+                            margin: 0px;
+                        }
+                        
+                        .kategorie {
+                            display: inline;
+                            position: relative;
+                            right: 125px;
+                            top: 5px;
+                            padding-top: 3px;
+                        }
+                        
+                        nav {
+                            background-color: crimson;
+                            width: 100%;
+                        }
+                        
+                        #Iconcontainer {
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                        
+                        .icons {
+                            margin-top: 20px;
+                        }
+                        
+                        #Iconcontainer>img {
+                            position: relative;
+                            bottom: 75px;
+                        }
+                        
+                        .Produkte img {
+                            width: 400px;
+                        }
+                        
+                        .product {
+                            border: 1px black solid;
+                            margin-top: 15px;
+                        }
+                        
+                        .Produkte {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            margin-top: 60px;
+                        }
+                        
+                        button {
+                            display: inline;
+                            position: relative;
+                            left: 44%;
+                            margin-bottom: 12px;
+                            /*margin-top: 20px;
+                            margin-bottom: 20px;
+                             width: 250px;
+                            height: 30px;*/
+                        }
+                        
+                        .product p {
+                            text-align: center;
+                        }
+                        
+                        #Iconcontainer a {
+                            text-decoration: none;
+                        }
+                        
+                        .product p * {
+                            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                        }
+                        
+                        @media screen and (min-width:601px) {
+                            h1 {
+                                font-size: 1.8em;
+                                position: relative;
+                                left: 25%;
+                            }
+                            h2 {
+                                text-align: left;
+                                flex-flow: nowrap;
+                            }
+                            body {
+                                width: 100%;
+                            }
+                            .kategorie {}
+                            nav {}
+                            #Iconcontainer {}
+                            .icons {}
+                            #Iconcontainer>img {}
+                            .Produkte img {
+                                height: 300px;
+                                width: 100%;
+                            }
+                            .product {
+                                align-content: space-between;
+                                width: 40%;
+                            }
+                            .Produkte {
+                                flex-flow: row wrap;
+                                justify-content: space-evenly;
+                            }
+                            button {
+                                position: relative;
+                                left: 40%;
+                            }
+                            .product p {}
+                            #Iconcontainer a {}
+                            #Iconcontainer+img {}
+                            #Icons~img {}
+                        }
+                        
+                        @media screen and (min-width:1025px) {
+                            h1 {
+                                font-size: 1.8em;
+                                position: relative;
+                                left: 130px;
+                                top: 12px;
+                            }
+                            h2 {}
+                            body {
+                                width: 100%;
+                            }
+                            .kategorie {}
+                            nav {}
+                            #Iconcontainer {}
+                            .icons {}
+                            #Iconcontainer>img {
+                                position: relative;
+                                bottom: 60px;
+                            }
+                            .Produkte img {}
+                            .product {
+                                width: 20%;
+                            }
+                            .Produkte {}
+                            button {}
+                            .product p {}
+                            #Iconcontainer a {}
+                            .breakpoint {
+                                display: none;
+                            }
+                        }
