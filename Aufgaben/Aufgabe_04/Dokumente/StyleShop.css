@@ -4,8 +4,11 @@
                             margin-top: 0px;
                             font-size: 1.7em;
                             position: relative;
-                            left: 130px;
+                            margin-left: 20%;
                             top: 12px;
+                        }
+                    img [alt="Logo"]{
+                        width: 30px;
                         }
                         
                         h2 {
@@ -14,7 +17,7 @@
                         }
                         
                         body {
-                            width: 600px;
+                            width: 100%;
                             margin: 0px;
                         }
                         
@@ -46,7 +49,7 @@
                         }
                         
                         .Produkte img {
-                            width: 400px;
+                            width: 300px;
                         }
                         
                         .product {
@@ -64,8 +67,9 @@
                         button {
                             display: inline;
                             position: relative;
-                            left: 44%;
-                            margin-bottom: 12px;
+                            left: 40%;
+                            margin-bottom: 5px;
+                            margin-top: 5px;
                             /*margin-top: 20px;
                             margin-bottom: 20px;
                              width: 250px;
@@ -79,16 +83,24 @@
                         #Iconcontainer a {
                             text-decoration: none;
                         }
-                        
-                        .product p * {
-                            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-                        }
+footer{
+    display: flex;
+     justify-content: center;
+}
+footer a{
+    display: inline;
+    margin: 12px;
+    text-decoration: none;
+    color: crimson;
+    padding: 4px;
+}
                         
                         @media screen and (min-width:601px) {
                             h1 {
                                 font-size: 1.8em;
                                 position: relative;
-                                left: 25%;
+                                left: 15%;
+                                margin-left: 0;
                             }
                             h2 {
                                 text-align: left;
@@ -111,6 +123,7 @@
                             .product {
                                 align-content: space-between;
                                 width: 40%;
+                                height: 500px;
                             }
                             .Produkte {
                                 flex-flow: row wrap;
@@ -118,7 +131,8 @@
                             }
                             button {
                                 position: relative;
-                                left: 40%;
+                                left: 38%;
+                                padding: 5px 15px;
                             }
                             .product p {}
                             #Iconcontainer a {}
@@ -153,9 +167,13 @@
                             .Produkte img {}
                             .product {
                                 width: 20%;
+                                height: 520px;
                             }
                             .Produkte {}
-                            button {}
+                            button {
+                                left: 0%;
+                            width: 100%;
+                            }
                             .product p {}
                             #Iconcontainer a {}
                             .breakpoint {
