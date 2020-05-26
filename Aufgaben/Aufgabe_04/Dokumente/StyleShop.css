@@ -55,6 +55,7 @@
 
                         .icons>img {
                             border: solid black 1px;
+                            width: 50px;
                         }
 
                         .Produkte img {
