@@ -9,7 +9,7 @@
                         }
 
                         img[alt="Logo"] {
-                            width: 60px;    
+                            width: 60px;
                             height: 50px;
                         }
 
@@ -26,7 +26,7 @@
                         .kategorie {
                             display: inline;
                             position: relative;
-                            top: 5px;
+                            bottom: 14px;
                             padding-top: 3px;
                         }
 
@@ -38,6 +38,7 @@
                         #Iconcontainer {
                             display: flex;
                             justify-content: space-between;
+                            height: 50px;
                         }
 
                         .icons {
@@ -47,10 +48,12 @@
                         }
 
                         #Iconcontainer>img {
-                            position: absolute;
-                            bottom: 90%;
+                            margin-top: 25px;
+                            position: relative;
+                            bottom: 70px;
                         }
-                        .icons>img{
+
+                        .icons>img {
                             border: solid black 1px;
                         }
 
@@ -68,7 +71,7 @@
                             display: flex;
                             flex-direction: column;
                             align-items: center;
-                            margin-top: 60px;
+                            margin-top: 10px;
                         }
 
                         button {
@@ -77,10 +80,6 @@
                             left: 40%;
                             margin-bottom: 5px;
                             margin-top: 5px;
-                            /*margin-top: 20px;
-                            margin-bottom: 20px;
-                             width: 250px;
-                            height: 30px;*/
                         }
 
                         .product p {
@@ -103,7 +102,8 @@
                             color: crimson;
                             padding: 4px;
                         }
-                        .breakpoint2{
+
+                        .breakpoint2 {
                             display: none;
                         }
 
@@ -121,18 +121,22 @@
                                 margin-left: 6%;
                             }
                             img[alt="Logo"] {
-                                width: 100px;    
+                                width: 100px;
+                                height: 60px;
                             }
                             body {
                                 width: 100%;
                             }
                             .kategorie {
                                 left: 60px;
+                                position: relative;
+                                top: 2px;
                             }
-                            nav {}
-                            #Iconcontainer {}
-                            .icons {}
-                            #Iconcontainer>img {}
+                            #Iconcontainer>img {
+                                margin-top: 0em;
+                                position: relative;
+                                bottom: 60px;
+                            }
                             .Produkte img {
                                 height: 300px;
                                 width: 100%;
@@ -152,17 +156,13 @@
                                 left: 38%;
                                 padding: 5px 15px;
                             }
-                            .product p {}
-                            #Iconcontainer a {}
-                            #Iconcontainer+img {}
-                            #Icons~img {}
                             .breakpoint {
                                 display: none;
                             }
-                            .breakpoint2{
+                            .breakpoint2 {
                                 display: block;
                             }
-                            }
+                        }
 
                         @media screen and (min-width:1025px) {
                             h1 {
@@ -170,7 +170,6 @@
                                 position: relative;
                                 left: 120px;
                                 top: 12px;
-
                             }
                             h2 {
                                 margin-left: 4%;
@@ -179,17 +178,10 @@
                             body {
                                 width: 100%;
                             }
-                            .kategorie {
-                                
-                            }
-                            nav {}
-                            #Iconcontainer {}
-                            .icons {}
                             #Iconcontainer>img {
                                 position: relative;
                                 bottom: 60px;
                             }
-                            .Produkte img {}
                             .product {
                                 width: 20%;
                                 height: 520px;
@@ -201,12 +193,10 @@
                                 left: 0%;
                                 width: 100%;
                             }
-                            .product p {}
-                            #Iconcontainer a {}
                             .breakpoint {
                                 display: none;
                             }
-                            .breakpoint2{
+                            .breakpoint2 {
                                 display: none;
                             }
                         }
