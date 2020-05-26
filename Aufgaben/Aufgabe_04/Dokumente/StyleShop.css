@@ -4,66 +4,68 @@
                             margin-top: 0px;
                             font-size: 1.7em;
                             position: relative;
-                            margin-left: 20%;
+                            margin-left: 22%;
                             top: 12px;
                         }
-                    img [alt="Logo"]{
-                        width: 30px;
+
+                        img [alt="Logo"] {
+                            width: 30px;
                         }
-                        
+
                         h2 {
                             margin-top: 40px;
                             text-align: center;
                         }
-                        
+
                         body {
                             width: 100%;
                             margin: 0px;
                         }
-                        
+
                         .kategorie {
                             display: inline;
                             position: relative;
-                            right: 125px;
                             top: 5px;
                             padding-top: 3px;
                         }
-                        
+
                         nav {
                             background-color: crimson;
                             width: 100%;
                         }
-                        
+
                         #Iconcontainer {
                             display: flex;
                             justify-content: space-between;
                         }
-                        
+
                         .icons {
                             margin-top: 20px;
                         }
-                        
+
                         #Iconcontainer>img {
-                            position: relative;
-                            bottom: 75px;
-                        }
+                            position: absolute;
+                            bottom: 90%;
                         
+                        }
+
                         .Produkte img {
                             width: 300px;
+                            height: 300px;
                         }
-                        
+
                         .product {
                             border: 1px black solid;
                             margin-top: 15px;
                         }
-                        
+
                         .Produkte {
                             display: flex;
                             flex-direction: column;
                             align-items: center;
                             margin-top: 60px;
                         }
-                        
+
                         button {
                             display: inline;
                             position: relative;
@@ -75,32 +77,37 @@
                              width: 250px;
                             height: 30px;*/
                         }
-                        
+
                         .product p {
                             text-align: center;
                         }
-                        
+
                         #Iconcontainer a {
                             text-decoration: none;
                         }
-footer{
-    display: flex;
-     justify-content: center;
-}
-footer a{
-    display: inline;
-    margin: 12px;
-    text-decoration: none;
-    color: crimson;
-    padding: 4px;
-}
-                        
+
+                        footer {
+                            display: flex;
+                            justify-content: center;
+                        }
+
+                        footer a {
+                            display: inline;
+                            margin: 12px;
+                            text-decoration: none;
+                            color: crimson;
+                            padding: 4px;
+                        }
+                        .breakpoint2{
+                            display: none;
+                        }
+
                         @media screen and (min-width:601px) {
                             h1 {
                                 font-size: 1.8em;
                                 position: relative;
                                 left: 15%;
-                                margin-left: 0;
+                                margin-left: 4%;
                             }
                             h2 {
                                 text-align: left;
@@ -111,7 +118,9 @@ footer a{
                             body {
                                 width: 100%;
                             }
-                            .kategorie {}
+                            .kategorie {
+                                left: 60px;
+                            }
                             nav {}
                             #Iconcontainer {}
                             .icons {}
@@ -128,6 +137,7 @@ footer a{
                             .Produkte {
                                 flex-flow: row wrap;
                                 justify-content: space-evenly;
+                                margin-top: auto;
                             }
                             button {
                                 position: relative;
@@ -141,22 +151,29 @@ footer a{
                             .breakpoint {
                                 display: none;
                             }
-                        }
-                        
+                            .breakpoint2{
+                                display: block;
+                            }
+                            }
+
                         @media screen and (min-width:1025px) {
                             h1 {
                                 font-size: 1.8em;
                                 position: relative;
-                                left: 130px;
+                                left: 120px;
                                 top: 12px;
+
                             }
                             h2 {
                                 margin-left: 4%;
+                                margin-top: 5%;
                             }
                             body {
                                 width: 100%;
                             }
-                            .kategorie {}
+                            .kategorie {
+                                
+                            }
                             nav {}
                             #Iconcontainer {}
                             .icons {}
@@ -169,14 +186,19 @@ footer a{
                                 width: 20%;
                                 height: 520px;
                             }
-                            .Produkte {}
+                            .Produkte {
+                                margin-top: auto;
+                            }
                             button {
                                 left: 0%;
-                            width: 100%;
+                                width: 100%;
                             }
                             .product p {}
                             #Iconcontainer a {}
                             .breakpoint {
+                                display: none;
+                            }
+                            .breakpoint2{
                                 display: none;
                             }
                         }
