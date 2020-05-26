@@ -2,14 +2,15 @@
                             display: inline-flex;
                             justify-content: center;
                             margin-top: 0px;
-                            font-size: 1.7em;
+                            font-size: 1.3em;
                             position: relative;
-                            margin-left: 22%;
+                            margin-left: 65px;
                             top: 12px;
                         }
 
                         img[alt="Logo"] {
                             width: 60px;    
+                            height: 50px;
                         }
 
                         h2 {
@@ -41,12 +42,16 @@
 
                         .icons {
                             margin-top: 20px;
+                            display: inline-flex;
+                            justify-content: space-around;
                         }
 
                         #Iconcontainer>img {
                             position: absolute;
-                            bottom: 95%;
-                        
+                            bottom: 90%;
+                        }
+                        .icons>img{
+                            border: solid black 1px;
                         }
 
                         .Produkte img {
