@@ -8,8 +8,8 @@
                             top: 12px;
                         }
 
-                        img [alt="Logo"] {
-                            width: 30px;
+                        img[alt="Logo"] {
+                            width: 60px;    
                         }
 
                         h2 {
@@ -45,7 +45,7 @@
 
                         #Iconcontainer>img {
                             position: absolute;
-                            bottom: 90%;
+                            bottom: 95%;
                         
                         }
 
@@ -114,6 +114,9 @@
                                 flex-flow: nowrap;
                                 flex-basis: 100%;
                                 margin-left: 6%;
+                            }
+                            img[alt="Logo"] {
+                                width: 100px;    
                             }
                             body {
                                 width: 100%;
