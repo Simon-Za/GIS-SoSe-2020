@@ -79,8 +79,8 @@
                             display: inline;
                             position: relative;
                             left: 40%;
-                            margin-bottom: 5px;
-                            margin-top: 5px;
+                           /* margin-bottom: 5px;
+                            margin-top: 5px;*/
                         }
 
                         .product p {
