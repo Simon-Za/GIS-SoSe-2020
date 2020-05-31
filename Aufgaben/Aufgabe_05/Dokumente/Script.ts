@@ -40,6 +40,7 @@ namespace Aufgabe_05 {
     h22.innerHTML = "Verfügbar bis 01.07.2020 <br class='breakpoint'> (wird danach in die Gärten der Nachbarn gestellt)";
 
 
+    produkteID.appendChild(h20);
 
 
 
@@ -49,16 +50,14 @@ namespace Aufgabe_05 {
         div.setAttribute("class", "product");
 
         produkteID.appendChild(div);
+        
 
-        if (produkte[index].kategorie == 1) {
-
-            produkteID.appendChild(h20);
-        }
-        if (produkte[index].kategorie == 2) {
+   
+        if (produkte[index].kategorie == 2 && produkte[index - 1].kategorie == 1) {
 
             produkteID.appendChild(h21);
         }
-        if (produkte[index].kategorie == 3) {
+        if (produkte[index].kategorie == 3 && produkte[index - 1].kategorie == 2) {
 
             produkteID.appendChild(h22);
         }
