@@ -28,13 +28,13 @@ var Aufgabe_05;
     for (let index = 0; index < produkte.length; index++) {
         let div = document.createElement("div");
         div.setAttribute("class", "product");
-        produkteID.appendChild(div);
         if (produkte[index].kategorie == 2 && produkte[index - 1].kategorie == 1) {
             produkteID.appendChild(h21);
         }
         if (produkte[index].kategorie == 3 && produkte[index - 1].kategorie == 2) {
             produkteID.appendChild(h22);
         }
+        produkteID.appendChild(div);
         let img = document.createElement("img");
         img.setAttribute("src", produkte[index].bild);
         img.setAttribute("alt", produkte[index].name);

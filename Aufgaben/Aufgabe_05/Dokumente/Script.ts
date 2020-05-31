@@ -48,8 +48,6 @@ namespace Aufgabe_05 {
 
         let div: HTMLDivElement = document.createElement("div");
         div.setAttribute("class", "product");
-
-        produkteID.appendChild(div);
         
 
    
@@ -61,6 +59,8 @@ namespace Aufgabe_05 {
 
             produkteID.appendChild(h22);
         }
+
+        produkteID.appendChild(div);
 
 
         let img: HTMLImageElement = document.createElement("img");
