@@ -48,9 +48,9 @@ namespace Aufgabe_05 {
 
         let div: HTMLDivElement = document.createElement("div");
         div.setAttribute("class", "product");
-        
 
-   
+
+
         if (produkte[index].kategorie == 2 && produkte[index - 1].kategorie == 1) {
 
             produkteID.appendChild(h21);
