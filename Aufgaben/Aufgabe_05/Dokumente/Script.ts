@@ -12,7 +12,7 @@ namespace Aufgabe_05 {
     let artikel2: Produkt = { bild: "IMG_20200523_191106.jpg", name: "Hanteln", preis: 12, beschreibung: "6x 12kg + 12x 1kg + 3 Stangen a 1kg", kategorie: 1 };
     let artikel3: Produkt = { bild: "IMG_20200523_191432.jpg", name: "chinesische Cartoonfiguren", preis: 3, beschreibung: "Was soll man dazu noch sagen", kategorie: 1 };
     let artikel4: Produkt = { bild: "IMG_20200523_191610.jpg", name: "Ein Einhornhorn", preis: 12, beschreibung: "Magisches Item, zu gebrauchen<br class='breakpoint'> für Zaubertrankbrauerei <br> oder andere Fetische", kategorie: 1 };
-    let artikel5: Produkt = { bild: "IMG_20200523_191701.jpg", name: "lautes Musikgerät", preis: 2, beschreibung: "Nur die Hülle zu verkaufen,<br> die Elektronik im Inneren<br class='breakpoint'>wurde bereits gelootet", kategorie: 2 };
+    let artikel5: Produkt = { bild: "IMG_20200523_191701.jpg", name: "lautes Musikgerät", preis: 2, beschreibung: "Nur die Hülle zu verkaufen,<br> die Elektronik im Inneren <br class='breakpoint'>wurde bereits gelootet", kategorie: 2 };
     let artikel6: Produkt = { bild: "IMG_20200523_192006.jpg", name: "SLS AMG", preis: 94.000, beschreibung: "Schönes Auto, guter Zustand", kategorie: 2 };
     let artikel7: Produkt = { bild: "IMG_20200523_192307.jpg", name: "Goethe Sekundärliteratur", preis: 8, beschreibung: "sehr alt und nicht nur literarisch,<br> sondern sicher auch historisch wertvoll<br>795 Seiten", kategorie: 2 };
     let artikel8: Produkt = { bild: "IMG_20200523_192643.jpg", name: "Elektronik", preis: 2, beschreibung: "keine Ahnung was das sein soll", kategorie: 2 };
@@ -40,16 +40,29 @@ namespace Aufgabe_05 {
     h22.innerHTML = "Verfügbar bis 01.07.2020 <br class='breakpoint'> (wird danach in die Gärten der Nachbarn gestellt)";
 
 
+    produkteID.appendChild(h20);
 
 
 
     for (let index: number = 0; index < produkte.length; index++) {
 
-
-
-
         let div: HTMLDivElement = document.createElement("div");
         div.setAttribute("class", "product");
+
+
+
+        if (produkte[index].kategorie == 2 && produkte[index - 1].kategorie == 1) {
+
+            produkteID.appendChild(h21);
+        }
+        if (produkte[index].kategorie == 3 && produkte[index - 1].kategorie == 2) {
+
+            produkteID.appendChild(h22);
+        }
+
+        produkteID.appendChild(div);
+
+
         let img: HTMLImageElement = document.createElement("img");
         img.setAttribute("src", produkte[index].bild);
         img.setAttribute("alt", produkte[index].name);
@@ -68,20 +81,5 @@ namespace Aufgabe_05 {
         div.appendChild(pBeschreibung);
 
 
-        if (index + 1 < produkte.length) {
-
-            if (produkte[index].kategorie == 1) {
-                if (produkte[index + 1].kategorie > produkte[index].kategorie) {
-                    produkteID.appendChild(h21);
-                }
-                produkteID.appendChild(div);
-            }
-            if (produkte[index].kategorie == 2) {
-                if (produkte[index + 1].kategorie > produkte[index].kategorie) {
-                    produkteID.appendChild(h22);
-                }
-                produkteID.appendChild(div);
-            }
-        }
     }
 }
