@@ -1,4 +1,4 @@
-namespace Aufgabe_05 {
+namespace Aufgabe_06 {
 
     interface Produkt {
         bild: string;
