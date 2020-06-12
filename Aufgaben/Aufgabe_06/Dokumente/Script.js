@@ -1,6 +1,6 @@
 "use strict";
-var Aufgabe_05;
-(function (Aufgabe_05) {
+var Aufgabe_06;
+(function (Aufgabe_06) {
     let artikel1 = { bild: "IMG_20200523_190757.jpg", name: "Ehrenmann Zaubererhut", preis: 12, beschreibung: "Lässt den Träger Cringelevel errreichen, <br> die ohne eine Form von Magie<br class='breakpoint'> nicht möglich wären.", kategorie: 1 };
     let artikel2 = { bild: "IMG_20200523_191106.jpg", name: "Hanteln", preis: 12, beschreibung: "6x 12kg + 12x 1kg + 3 Stangen a 1kg", kategorie: 1 };
     let artikel3 = { bild: "IMG_20200523_191432.jpg", name: "chinesische Cartoonfiguren", preis: 3, beschreibung: "Was soll man dazu noch sagen", kategorie: 1 };
@@ -121,5 +121,5 @@ var Aufgabe_05;
         warenkorb += produkte[produktIndex].preis;
         console.log("Sie sind sich sicher, dass sie " + warenkorb + "€ für diesen Schrott zahlen wollen?");
     }
-})(Aufgabe_05 || (Aufgabe_05 = {}));
+})(Aufgabe_06 || (Aufgabe_06 = {}));
 //# sourceMappingURL=Script.js.map
