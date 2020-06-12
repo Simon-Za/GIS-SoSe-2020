@@ -4,7 +4,8 @@ namespace Aufgabe_07 {
 
     let zähler: number = 0;
     let spanZ: HTMLSpanElement = document.createElement("span");
-    let warenkorb: number = 0;
+    export let warenkorb: number = 0;
+
     let resetKat: HTMLAnchorElement = document.createElement("a");
     resetKat.setAttribute("href", "#");
     let resetKatH: HTMLHeadingElement = document.createElement("h3");
@@ -144,6 +145,8 @@ namespace Aufgabe_07 {
         }
     }
 
+    //let shoppinCart: Produkt[];
+
     function addToCart(_event: Event): void {
         zähler++;
         spanZ.innerHTML = zähler.toString();
@@ -151,6 +154,13 @@ namespace Aufgabe_07 {
         let target: HTMLElement = <HTMLElement>_event.target;
         let produktIndex: number = parseFloat(target.getAttribute("produktIndex")!);
         warenkorb += produkte[produktIndex].preis;
+        
+        localStorage.setItem("gesamtpreis", "" + warenkorb);
+
+        let shoppinCart: Produkt[];
+        localStorage.setItem("shoppinCart", "" + shoppinCart); //????
+
+
         console.log("Sie sind sich sicher, dass sie " + warenkorb + "€ für diesen Schrott zahlen wollen?");
     }
 

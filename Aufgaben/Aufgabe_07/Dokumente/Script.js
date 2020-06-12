@@ -3,7 +3,7 @@ var Aufgabe_07;
 (function (Aufgabe_07) {
     let zähler = 0;
     let spanZ = document.createElement("span");
-    let warenkorb = 0;
+    Aufgabe_07.warenkorb = 0;
     let resetKat = document.createElement("a");
     resetKat.setAttribute("href", "#");
     let resetKatH = document.createElement("h3");
@@ -102,14 +102,18 @@ var Aufgabe_07;
         }
     }
     Aufgabe_07.seiteAufbauen = seiteAufbauen;
+    //let shoppinCart: Produkt[];
     function addToCart(_event) {
         zähler++;
         spanZ.innerHTML = zähler.toString();
         document.getElementById("icons")?.appendChild(spanZ);
         let target = _event.target;
         let produktIndex = parseFloat(target.getAttribute("produktIndex"));
-        warenkorb += Aufgabe_07.produkte[produktIndex].preis;
-        console.log("Sie sind sich sicher, dass sie " + warenkorb + "€ für diesen Schrott zahlen wollen?");
+        Aufgabe_07.warenkorb += Aufgabe_07.produkte[produktIndex].preis;
+        localStorage.setItem("gesamtpreis", "" + Aufgabe_07.warenkorb);
+        let shoppinCart;
+        localStorage.setItem("shoppinCart", "" + shoppinCart); //????
+        console.log("Sie sind sich sicher, dass sie " + Aufgabe_07.warenkorb + "€ für diesen Schrott zahlen wollen?");
     }
 })(Aufgabe_07 || (Aufgabe_07 = {}));
 //# sourceMappingURL=Script.js.map
