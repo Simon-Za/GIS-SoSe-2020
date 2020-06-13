@@ -11,9 +11,10 @@ var Aufgabe_07;
     //Produkte generieren
     //local storage
     let CartArray = JSON.parse(localStorage.getItem("CartArray"));
-    //warenkorbGeneriern();
-    //function warenkorbGeneriern(): void{
     for (let index = 0; index < CartArray.length; index++) {
+        if (CartArray[index] == null) {
+            continue;
+        }
         let div = document.createElement("div");
         div.setAttribute("class", "product");
         document.getElementById("ProdukteID")?.appendChild(div);
@@ -39,21 +40,12 @@ var Aufgabe_07;
         function removeFromCart(_event) {
             let target = _event.target;
             let produktIndex = parseFloat(target.getAttribute("produktIndex"));
-            gesamtPreis.innerHTML = "Gesamtpreis: " + Aufgabe_07.warenkorb + "€";
-            console.log(produktIndex);
             Aufgabe_07.warenkorb -= CartArray[produktIndex].preis;
+            gesamtPreis.innerHTML = "Gesamtpreis: " + Aufgabe_07.warenkorb + "€";
             delete CartArray[produktIndex];
-            /* for (let i = produktIndex; i<CartArray.length; i++){
-             if (CartArray[produktIndex+1]){
-                 CartArray[produktIndex] = CartArray[produktIndex+1];
-             }
-         }*/
-            CartArray.splice(produktIndex, 1);
             div.remove();
             localStorage.setItem("CartArray", JSON.stringify(CartArray));
             localStorage.setItem("gesamtpreis", "" + Aufgabe_07.warenkorb);
-            //deletHtmlElmnts();
-            //warenkorbGeneriern();
         }
     }
     // }
@@ -71,8 +63,5 @@ var Aufgabe_07;
         gesamtPreis.remove();
         document.getElementById("ProdukteID")?.remove();
     }
-    /*function deletHtmlElmnts(): void {
-        
-    }*/
 })(Aufgabe_07 || (Aufgabe_07 = {}));
 //# sourceMappingURL=Warenkorb.js.map

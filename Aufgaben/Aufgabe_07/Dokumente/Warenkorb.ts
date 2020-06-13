@@ -12,11 +12,13 @@ namespace Aufgabe_07 {
     //local storage
     
         let CartArray: Array<Produkt> = JSON.parse(localStorage.getItem("CartArray")!);
-        //warenkorbGeneriern();
-    //function warenkorbGeneriern(): void{
 
         for (let index: number = 0; index < CartArray.length; index++) {
 
+            if(CartArray[index] == null){
+                continue;
+            }
+            
             let div: HTMLDivElement = document.createElement("div");
             div.setAttribute("class", "product");
             document.getElementById("ProdukteID")?.appendChild(div);
@@ -49,25 +51,18 @@ namespace Aufgabe_07 {
             div.appendChild(button);
             div.appendChild(pPreis);
             div.appendChild(pBeschreibung);
+            
 
             function removeFromCart(_event: Event): void {
                 let target: HTMLElement = <HTMLElement>_event.target;
                 let produktIndex: number = parseFloat(target.getAttribute("produktIndex")!);
-                gesamtPreis.innerHTML = "Gesamtpreis: " + warenkorb + "€";
-                console.log(produktIndex);
                 warenkorb -= CartArray[produktIndex].preis;
+                gesamtPreis.innerHTML = "Gesamtpreis: " + warenkorb + "€";
                 delete CartArray[produktIndex];
-               /* for (let i = produktIndex; i<CartArray.length; i++){
-                if (CartArray[produktIndex+1]){
-                    CartArray[produktIndex] = CartArray[produktIndex+1];
-                }
-            }*/
-                CartArray.splice(produktIndex, 1);
+
                 div.remove();
                 localStorage.setItem("CartArray", JSON.stringify(CartArray));
                 localStorage.setItem("gesamtpreis", "" + warenkorb);
-                //deletHtmlElmnts();
-                //warenkorbGeneriern();
             }
         }
    // }
@@ -87,8 +82,5 @@ namespace Aufgabe_07 {
         gesamtPreis.remove();
         document.getElementById("ProdukteID")?.remove();   
     }
-    /*function deletHtmlElmnts(): void {
-        
-    }*/
 
 }
