@@ -1,6 +1,9 @@
 "use strict";
 var Aufgabe_07;
 (function (Aufgabe_07) {
+    if (performance.navigation.type == 1) {
+        localStorage.clear();
+    }
     let zähler = 0;
     let spanZ = document.createElement("span");
     Aufgabe_07.warenkorb = 0;
@@ -11,6 +14,8 @@ var Aufgabe_07;
     resetKatH.innerHTML = "| show all";
     resetKat.setAttribute("id", "reset");
     document.getElementById("Iconcontainer")?.appendChild(resetKat);
+    //Cart Array erstellen 
+    let shoppinCart;
     const produkteID = document.getElementById("ProdukteID");
     let h20 = document.createElement("h2");
     h20.setAttribute("id", "oben");
@@ -102,17 +107,24 @@ var Aufgabe_07;
         }
     }
     Aufgabe_07.seiteAufbauen = seiteAufbauen;
-    //let shoppinCart: Produkt[];
     function addToCart(_event) {
         zähler++;
         spanZ.innerHTML = zähler.toString();
         document.getElementById("icons")?.appendChild(spanZ);
         let target = _event.target;
         let produktIndex = parseFloat(target.getAttribute("produktIndex"));
+        if (localStorage.getItem("gesamtpreis")) {
+            Aufgabe_07.warenkorb = parseFloat(localStorage.getItem("gesamtpreis"));
+        }
         Aufgabe_07.warenkorb += Aufgabe_07.produkte[produktIndex].preis;
+        shoppinCart = JSON.parse(localStorage.getItem("CartArray"));
+        if (!shoppinCart) {
+            shoppinCart = [Aufgabe_07.produkte[produktIndex]];
+        }
+        else
+            shoppinCart.push(Aufgabe_07.produkte[produktIndex]);
+        localStorage.setItem("CartArray", JSON.stringify(shoppinCart));
         localStorage.setItem("gesamtpreis", "" + Aufgabe_07.warenkorb);
-        let shoppinCart;
-        localStorage.setItem("shoppinCart", "" + shoppinCart); //????
         console.log("Sie sind sich sicher, dass sie " + Aufgabe_07.warenkorb + "€ für diesen Schrott zahlen wollen?");
     }
 })(Aufgabe_07 || (Aufgabe_07 = {}));

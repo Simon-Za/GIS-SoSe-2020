@@ -1,5 +1,8 @@
 namespace Aufgabe_07 {
 
+    if (performance.navigation.type == 1) {
+        localStorage.clear();
+    }
 
 
     let zähler: number = 0;
@@ -14,8 +17,8 @@ namespace Aufgabe_07 {
     resetKat.setAttribute("id", "reset");
     document.getElementById("Iconcontainer")?.appendChild(resetKat);
 
-
-
+    //Cart Array erstellen 
+    let shoppinCart: Array<Produkt>;
 
 
     const produkteID: HTMLElement = document.getElementById("ProdukteID") as HTMLDivElement;
@@ -145,7 +148,6 @@ namespace Aufgabe_07 {
         }
     }
 
-    //let shoppinCart: Produkt[];
 
     function addToCart(_event: Event): void {
         zähler++;
@@ -153,12 +155,21 @@ namespace Aufgabe_07 {
         document.getElementById("icons")?.appendChild(spanZ);
         let target: HTMLElement = <HTMLElement>_event.target;
         let produktIndex: number = parseFloat(target.getAttribute("produktIndex")!);
+        if(localStorage.getItem("gesamtpreis")){
+            warenkorb = parseFloat(localStorage.getItem("gesamtpreis")!);
+        }
         warenkorb += produkte[produktIndex].preis;
         
-        localStorage.setItem("gesamtpreis", "" + warenkorb);
+        shoppinCart = JSON.parse(localStorage.getItem("CartArray")!);
+        if(!shoppinCart){
+            shoppinCart = [produkte[produktIndex]];
+        }
+        else
+            shoppinCart.push(produkte[produktIndex]);
 
-        let shoppinCart: Produkt[];
-        localStorage.setItem("shoppinCart", "" + shoppinCart); //????
+        localStorage.setItem("CartArray", JSON.stringify(shoppinCart));
+        
+        localStorage.setItem("gesamtpreis", "" + warenkorb);
 
 
         console.log("Sie sind sich sicher, dass sie " + warenkorb + "€ für diesen Schrott zahlen wollen?");
