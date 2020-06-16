@@ -1,0 +1,21 @@
+{
+  "name": "gis-sose-2020",
+  "version": "1.0.0",
+  "description": "You can use the [editor on GitHub](https://github.com/Simon-Za/GIS-SoSe-2020/edit/master/README.md) to maintain and preview the content for your website in Markdown files.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "start": "node Aufgaben/Aufgabe_08/Test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Simon-Za/GIS-SoSe-2020.git"
+  },
+  "author": "simonza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Simon-Za/GIS-SoSe-2020/issues"
+  },
+  "homepage": "https://github.com/Simon-Za/GIS-SoSe-2020#readme"
+}
