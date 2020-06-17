@@ -21,5 +21,5 @@ var A08Server;
         _response.write(_request.url);
         _response.end();
     }
-})(A08Server || (A08Server = {}));
+})(A08Server = exports.A08Server || (exports.A08Server = {}));
 //# sourceMappingURL=server.js.map
