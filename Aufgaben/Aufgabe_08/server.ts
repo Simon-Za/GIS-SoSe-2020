@@ -1,6 +1,6 @@
 import * as Http from "http";
 
- namespace A08Server {
+ export namespace A08Server {
   console.log("Starting server");
   let port: number = Number(process.env.PORT);
   if (!port)
