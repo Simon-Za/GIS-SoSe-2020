@@ -59,7 +59,6 @@ namespace Aufgabe_07 {
                 warenkorb -= CartArray[produktIndex].preis;
                 gesamtPreis.innerHTML = "Gesamtpreis: " + warenkorb + "€";
                 delete CartArray[produktIndex];
-
                 div.remove();
                 localStorage.setItem("CartArray", JSON.stringify(CartArray));
                 localStorage.setItem("gesamtpreis", "" + warenkorb);
