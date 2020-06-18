@@ -23,8 +23,13 @@ export namespace A08Server {
 
         _response.write(_request.url);              //Die Request wird in die URL geschrieben
 
+<<<<<<< Updated upstream
         console.log(_request.url);                  // und in der console ausgegeben
 
         _response.end();                           //die response endet
     }
+=======
+    _response.end();                           //die response endet
+  }
+>>>>>>> Stashed changes
 }

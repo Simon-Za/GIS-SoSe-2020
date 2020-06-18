@@ -7,7 +7,7 @@ namespace Aufgabe_07 {
 
     let zähler: number = 0;
     let spanZ: HTMLSpanElement = document.createElement("span");
-    export let warenkorb: number = 0;
+    export let warenkorb: number = 0; 
 
     let resetKat: HTMLAnchorElement = document.createElement("a");
     resetKat.setAttribute("href", "#");

@@ -12,6 +12,6 @@ namespace Aufgabe_07 {
     async function ArtikelLaden(_url: RequestInfo): Promise<void> {
         let response: Response = await fetch(_url);
         produkte = await response.json();
-        seiteAufbauen();
+        seiteAufbauen(); 
     }
 }
