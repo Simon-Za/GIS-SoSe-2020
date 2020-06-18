@@ -23,6 +23,6 @@ export namespace A08Server {
 
         _response.write(_request.url);              //Die Request wird in die URL geschrieben
 
-        _response.end();                           //die response endet
+        _response.end();                           //Die response endet
     }
 }
