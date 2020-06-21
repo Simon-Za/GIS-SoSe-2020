@@ -18,7 +18,7 @@ namespace Aufgabe_07 {
             if(CartArray[index] == null){
                 continue;
             }
-            
+             
             let div: HTMLDivElement = document.createElement("div");
             div.setAttribute("class", "product");
             document.getElementById("ProdukteID")?.appendChild(div);
