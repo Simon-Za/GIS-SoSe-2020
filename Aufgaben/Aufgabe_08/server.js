@@ -20,6 +20,7 @@ var A08Server;
         _response.setHeader("content-type", "text/html; charset=utf-8"); //Ein Header wird aufgebaut
         _response.setHeader("Access-Control-Allow-Origin", "*");
         _response.write(_request.url); //Die Request wird in die URL geschrieben
+        console.log(_request.url);
         _response.end(); //Die response endet
     }
 })(A08Server = exports.A08Server || (exports.A08Server = {}));

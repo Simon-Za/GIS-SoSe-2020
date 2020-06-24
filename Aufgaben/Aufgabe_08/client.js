@@ -6,7 +6,7 @@ var A08Server;
         let formData = new FormData(document.forms[0]);
         let url = "https://gissose2020.herokuapp.com/";
         let query = new URLSearchParams(formData);
-        url += url + "?" + query.toString();
+        url += "?" + query.toString();
         console.log((await fetch(url)).url);
     }
 })(A08Server || (A08Server = {}));

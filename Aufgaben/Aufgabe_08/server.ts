@@ -1,4 +1,5 @@
 import * as Http from "http"; //importieren von http modul, das für Serverentwicklunbg benötigt wird
+import { url } from "inspector";
 
 export namespace A08Server {
     console.log("Starting server"); //Ausgabe, dass Server startet 
@@ -22,6 +23,8 @@ export namespace A08Server {
         _response.setHeader("Access-Control-Allow-Origin", "*");
 
         _response.write(_request.url);              //Die Request wird in die URL geschrieben
+
+        console.log(_request.url);
 
         _response.end();                           //Die response endet
     }
