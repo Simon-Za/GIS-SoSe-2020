@@ -40,8 +40,7 @@ export namespace A09Server {
             }
         }
 
-        console.log("beep boop");
-        _response.write("if u read this u a fkn nerd");              //Die URL wird auf die Seite geschrieben
+        console.log("beep boop");             //Die URL wird auf die Seite geschrieben
         _response.end();                                             //die response endet
     }
 }

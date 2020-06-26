@@ -7,7 +7,7 @@ namespace A09Server {
     async function gibResponse(): Promise<void> {
 
         let formData: FormData = new FormData(document.forms[0]);
-        let url: string = "http://localhost:8100";
+        let url: string = "https://gissose2020.herokuapp.com/";
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         url += "/html?" + query.toString();
 
@@ -21,7 +21,7 @@ namespace A09Server {
     async function gibResponseJson(): Promise<void> {
 
         let formData: FormData = new FormData(document.forms[0]);
-        let url: string = "http://localhost:8100";
+        let url: string = "https://gissose2020.herokuapp.com/";
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         url += "/json?" + query.toString();
         let response: Response = await fetch(url);

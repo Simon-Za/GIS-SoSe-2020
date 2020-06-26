@@ -30,13 +30,12 @@ var A09Server;
             }
             if (url.pathname == "/json") {
                 let jsonString = JSON.stringify(url.query);
+                // let jsonString: string = JSON.parse(JSON.stringify(url.query));
                 _response.write(jsonString);
-                console.log("habibi nohomo");
                 console.log(jsonString);
             }
         }
-        console.log("beep boop");
-        _response.write("if u read this u a fkn nerd"); //Die URL wird auf die Seite geschrieben
+        console.log("beep boop"); //Die URL wird auf die Seite geschrieben
         _response.end(); //die response endet
     }
 })(A09Server = exports.A09Server || (exports.A09Server = {}));
