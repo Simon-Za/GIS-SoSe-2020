@@ -5,7 +5,7 @@ var A09Server;
     document.getElementById("button2").addEventListener("click", gibResponseJson);
     async function gibResponse() {
         let formData = new FormData(document.forms[0]);
-        let url = "http://localhost:8100";
+        let url = "https://gissose2020.herokuapp.com/";
         let query = new URLSearchParams(formData);
         url += "/html?" + query.toString();
         let response = await fetch(url);
@@ -16,7 +16,7 @@ var A09Server;
     }
     async function gibResponseJson() {
         let formData = new FormData(document.forms[0]);
-        let url = "http://localhost:8100";
+        let url = "https://gissose2020.herokuapp.com/";
         let query = new URLSearchParams(formData);
         url += "/json?" + query.toString();
         let response = await fetch(url);
