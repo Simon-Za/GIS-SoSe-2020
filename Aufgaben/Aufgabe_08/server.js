@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.A08Server = void 0;
 const Http = require("http"); //importieren von http modul, das für Serverentwicklunbg benötigt wird
+//import { url } from "inspector";
 var A08Server;
 (function (A08Server) {
     console.log("Starting server"); //Ausgabe, dass Server startet 

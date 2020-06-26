@@ -1,5 +1,5 @@
 import * as Http from "http"; //importieren von http modul, das für Serverentwicklunbg benötigt wird
-import { url } from "inspector";
+//import { url } from "inspector";
 
 export namespace A08Server {
     console.log("Starting server"); //Ausgabe, dass Server startet 

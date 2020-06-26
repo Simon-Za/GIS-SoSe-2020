@@ -1,18 +1,30 @@
 "use strict";
-var A08Server;
-(function (A08Server) {
-    let formData = new FormData(document.forms[0]);
-    for (let entry of formData) {
-        console.log(entry);
-        console.log("name: " + entry[0]);
-        console.log("value: " + entry[1]);
-    }
-    //formData.append(serverDaten);
-    async function serverDaten() {
-        let url = "https://gissose2020.herokuapp.com/";
+var A09Server;
+(function (A09Server) {
+    document.getElementById("button1").addEventListener("click", gibResponse);
+    document.getElementById("button2").addEventListener("click", gibResponseJson);
+    async function gibResponse() {
+        let formData = new FormData(document.forms[0]);
+        let url = "http://localhost:8100";
         let query = new URLSearchParams(formData);
-        url += url + "?" + query.toString();
-        await fetch(url);
+        url += "/html?" + query.toString();
+        let response = await fetch(url);
+        let responseText = await response.text();
+        let tekscht = document.createElement("p");
+        tekscht.innerHTML = responseText;
+        document.body.appendChild(tekscht);
     }
-})(A08Server || (A08Server = {}));
+    async function gibResponseJson() {
+        let formData = new FormData(document.forms[0]);
+        let url = "http://localhost:8100";
+        let query = new URLSearchParams(formData);
+        url += "/json?" + query.toString();
+        let response = await fetch(url);
+        let responseText = await response.json();
+        //await response.text();
+        //let jsonString: string = JSON.stringify(url);
+        //response.write(jsonString);
+        console.log((responseText));
+    }
+})(A09Server || (A09Server = {}));
 //# sourceMappingURL=client.js.map

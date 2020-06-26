@@ -1,15 +1,36 @@
-namespace A08Server {
-    let formData: FormData = new FormData(document.forms[0]);
-    for (let entry of formData) {
-        console.log(entry);
-        console.log("name: " + entry[0]);
-        console.log("value: " + entry[1]);
-    }
-    //formData.append(serverDaten);
-    async function serverDaten(): Promise<void> {
-        let url: string = "https://gissose2020.herokuapp.com/";
+namespace A09Server {
+
+    document.getElementById("button1")!.addEventListener("click", gibResponse);
+    document.getElementById("button2")!.addEventListener("click", gibResponseJson);
+
+
+    async function gibResponse(): Promise<void> {
+
+        let formData: FormData = new FormData(document.forms[0]);
+        let url: string = "http://localhost:8100";
         let query: URLSearchParams = new URLSearchParams(<any>formData);
-        url += url + "?" + query.toString();
-        await fetch(url);
+        url += "/html?" + query.toString();
+
+        let response: Response = await fetch(url);
+        let responseText: string = await response.text();
+        let tekscht: HTMLElement = document.createElement("p");
+        tekscht.innerHTML = responseText;
+        document.body.appendChild(tekscht);
+    }
+
+    async function gibResponseJson(): Promise<void> {
+
+        let formData: FormData = new FormData(document.forms[0]);
+        let url: string = "http://localhost:8100";
+        let query: URLSearchParams = new URLSearchParams(<any>formData);
+        url += "/json?" + query.toString();
+        let response: Response = await fetch(url);
+        let responseText: string = await response.json();
+        
+        //await response.text();
+        
+        //let jsonString: string = JSON.stringify(url);
+        //response.write(jsonString);
+        console.log((responseText));
     }
 }
