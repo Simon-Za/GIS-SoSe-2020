@@ -61,7 +61,7 @@ var Endabgabe;
         _response.end(); //die response endet
     }
     function storeOrder(_order) {
-        orders.insert(_order);
+        orders.insertOne(_order);
     }
 })(Endabgabe || (Endabgabe = {}));
 //# sourceMappingURL=server.js.map

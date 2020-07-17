@@ -87,6 +87,6 @@ namespace Endabgabe {
     }
 
     function storeOrder(_order: Order): void {
-        orders.insert(_order);
+        orders.insertOne(_order);
     }
 }
