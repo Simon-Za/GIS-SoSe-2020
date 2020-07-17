@@ -60,6 +60,11 @@ namespace Endabgabe {
                 storeOrder(url.query);
             }
 
+            if (url.pathname == "/getData") {
+                _response.write(JSON.stringify(orders.find()));
+                //storeOrder(url.query);
+            }
+
 
 
 

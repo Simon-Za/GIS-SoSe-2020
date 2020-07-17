@@ -41,6 +41,10 @@ var Endabgabe;
             if (url.pathname == "/sendData") {
                 storeOrder(url.query);
             }
+            if (url.pathname == "/getData") {
+                _response.write(JSON.stringify(orders.find()));
+                //storeOrder(url.query);
+            }
             /*  for (let key in url.query) {
                   _response.write(key + ": " + url.query[key]);
               }*/
