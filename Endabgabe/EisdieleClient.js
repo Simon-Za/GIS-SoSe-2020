@@ -14,7 +14,7 @@ var Endabgabe;
         url += "&Sauce" + "=" + localStorage.getItem("Sauce");
         url += "&Topping" + "=" + localStorage.getItem("Topping");
         console.log(url);
-        fetch(url);
+        await fetch(url);
         //let response: Response = await fetch(url);
         //let responseText: string = await response.text();
     }
