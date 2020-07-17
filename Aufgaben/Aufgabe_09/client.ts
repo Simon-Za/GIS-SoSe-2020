@@ -13,7 +13,7 @@ namespace A09Server {
 
         let response: Response = await fetch(url);
         let responseText: string = await response.text();
-        let tekscht: HTMLElement = document.createElement("p");
+        let tekscht: HTMLElement = document.createElement("p"); 
         tekscht.innerHTML = responseText;
         document.body.appendChild(tekscht);
     }

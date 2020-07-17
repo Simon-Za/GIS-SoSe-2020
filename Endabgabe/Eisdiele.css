@@ -1,0 +1,170 @@
+h1 {
+display: flex;
+justify-content: center;
+margin: auto;
+font-family: 'Galada', cursive;
+}
+header {
+ padding-top: 10px;
+ padding-bottom: 20px;
+ background-color: #0E1C36;
+ color: #D7F9FF;
+}
+h3 {
+margin: auto;
+margin-top: 5px;
+display: flex;
+justify-content: center;
+}
+
+img[alt="Logo"] {
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+main {
+    text-align: center;
+}
+body {
+    margin: 0;
+    background-color: #F9FBF2;
+    color: #3466c2;
+}
+#cone {
+    width: 200px;
+}
+#cup {
+    width: 350px;
+}
+.next {
+    height: 40px;
+    width: 150px;
+    border-radius: 8px;
+    background-color: #FFEDE1;
+    border-color: #3466c2;
+    color: #3466c2;
+    margin: 20px;
+}
+.next:hover{
+background-color: #3466c2;
+color: #FFEDE1;
+}
+#fruit, #milk, #bullshit {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+#fruit {
+    background-color: #9acd3222;
+}
+#milk {
+    background-color: #f5deb322;
+}
+#bullshit {
+    background-color: #ee82ee22;
+}
+
+.flavor {
+    margin: 20px;
+}
+button {
+    border-radius: 10px;
+    border-color: #3466c2;
+    background-color: #FFEDE1;
+}
+button:hover{
+    background-color: #3466c2;
+    color: #FFEDE1;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+}
+.tooltip:hover .tooltiptext {
+     visibility: visible;
+}
+.parallel {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+.flavor>img {
+    width: 80px;
+}
+.flavor>p {
+    margin-top: 0px;
+}
+.flavor {
+    text-align: center;
+}
+.sauce {
+    margin: 20px;
+}
+.sauce>img {
+    width: 80px;
+}
+.sauce>p {
+    margin-top: 0px;
+}
+#sauces {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+input[type=text] {
+    margin-top: 40px;
+    width: 300px;
+}
+input[value="Place Order"] {
+    margin-top: 40px;
+}
+textarea[placeholder="Comment"] {
+    width: 300px;
+    height: 100px;
+    margin-top: 40px;
+}
+#preview {
+    width: 400px;
+}
+.iframe {
+    width: 500px;
+    height: 500px;
+}
+body {
+    scrollbar-3dlight-color: #3466c2;
+    scrollbar-arrow-color: #3466c2;
+    scrollbar-darkshadow-color: #3466c2;
+    scrollbar-face-color: #3466c2;
+    scrollbar-highlight-color: #3466c2;
+    scrollbar-shadow-color: #3466c2;
+    scrollbar-track-color: #3466c2;
+}
+.invis {
+    display: none;
+}
+#flavorsInvis {
+    display: none;
+}
+#chooseVesselInvis {
+    display: none;
+}
+#Scoop1 {
+    /*hier das jeweilige Styling für die Kugeln, ggf neue Scoop++ adden*/
+}
+#Scoop2 {
+
+}
+#Scoop3 {
+
+}
+#Scoop4 {
+
+}
