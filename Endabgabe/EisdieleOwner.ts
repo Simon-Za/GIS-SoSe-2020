@@ -15,7 +15,7 @@ namespace Endabgabe {
         let responseText: string = JSON.parse(await response.text());
 
         console.log(responseText);
-        let order: HTMLElement = document.createElement("p");
+        let order: HTMLParagraphElement = document.createElement("p");
         order.innerHTML = responseText;
         document.getElementById("Bestellübersicht")?.appendChild(order);
     
