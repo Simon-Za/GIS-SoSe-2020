@@ -15,7 +15,7 @@ var Endabgabe;
         let div = document.createElement("div");
         div.setAttribute("id", "Bestellungen");
         let order = document.createElement("p");
-        order.innerHTML = "hello";
+        order.innerHTML = "hello" + responseText;
         div.appendChild(order);
         main.appendChild(div);
         //console.log(url);

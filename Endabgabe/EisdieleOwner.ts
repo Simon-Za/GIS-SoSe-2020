@@ -19,7 +19,7 @@ namespace Endabgabe {
         div.setAttribute("id", "Bestellungen");
         
         let order: HTMLParagraphElement = document.createElement("p");
-        order.innerHTML = "hello";
+        order.innerHTML = "hello" + responseText;
         
         div.appendChild(order);
         main.appendChild(div);
