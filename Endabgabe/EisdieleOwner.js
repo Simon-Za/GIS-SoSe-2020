@@ -9,27 +9,32 @@ var Endabgabe;
         //let query: URLSearchParams = new URLSearchParams(<any>formData);
         url += "/getData?";
         let response = await fetch(url);
-        let responseText = await response.text();
+        let responseText = JSON.parse(await response.text());
         console.log(responseText);
         //console.log(url);
         //await fetch(url);
         //let response: Response = await fetch(url);
         //let responseText: string = await response.text();
     }
-    async function sendData() {
-        let formData = new FormData(document.forms[0]);
-        let url = "https://gissose2020.herokuapp.com";
-        let query = new URLSearchParams(formData);
+    /* async function sendData(): Promise<void> {
+
+        let formData: FormData = new FormData(document.forms[0]);
+        let url: string = "https://gissose2020.herokuapp.com";
+        let query: URLSearchParams = new URLSearchParams(<any>formData);
         url += "/sendData?" + query.toString() + "&Vessel=" + localStorage.getItem("Vessel");
-        for (let i = 1; i <= counter; i++) {
+
+        for (let i: number = 1; i <= counter; i++) {
             url += "&Flavor" + i + "=" + localStorage.getItem("Flavor" + i);
         }
+        
         url += "&Sauce" + "=" + localStorage.getItem("Sauce");
         url += "&Topping" + "=" + localStorage.getItem("Topping");
         console.log(url);
         await fetch(url);
+
         //let response: Response = await fetch(url);
         //let responseText: string = await response.text();
-    }
+ 
+    } */
 })(Endabgabe || (Endabgabe = {}));
 //# sourceMappingURL=EisdieleOwner.js.map

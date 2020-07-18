@@ -19,7 +19,7 @@ namespace Endabgabe {
         url += "/getData?";
 
         let response: Response = await fetch(url);
-        let responseText: string = await response.text();
+        let responseText: string = JSON.parse(await response.text());
 
         console.log(responseText);
     
@@ -31,7 +31,7 @@ namespace Endabgabe {
 
     }
 
-    async function sendData(): Promise<void> {
+    /* async function sendData(): Promise<void> {
 
         let formData: FormData = new FormData(document.forms[0]);
         let url: string = "https://gissose2020.herokuapp.com";
@@ -50,5 +50,5 @@ namespace Endabgabe {
         //let response: Response = await fetch(url);
         //let responseText: string = await response.text();
  
-    }
+    } */
 }
