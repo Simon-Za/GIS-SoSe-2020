@@ -20,10 +20,9 @@ namespace Endabgabe {
         let response: Response = await fetch(url);
         let responseText: string = await response.text();
 
-        console.log(responseText + "yees");
         console.log(JSON.parse(responseText));
         let order: HTMLParagraphElement = document.createElement("p");
-        order.innerHTML = "hello" + JSON.parse(responseText);
+        order.innerHTML = "hello" + responseText;
 
 
         div.appendChild(order);
