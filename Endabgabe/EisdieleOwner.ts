@@ -3,7 +3,12 @@ namespace Endabgabe {
     document.getElementById("getButton")?.addEventListener("click", getData);
     let main: HTMLElement = document.getElementById("main") as HTMLElement;
     //let counter: number = parseInt(localStorage.getItem("counter")!);
-    
+
+
+    let div: HTMLElement = document.createElement("div");
+    div.setAttribute("id", "Bestellungen");
+
+
     async function getData(): Promise<void> {
 
         let formData: FormData = new FormData(document.forms[0]);
@@ -15,15 +20,13 @@ namespace Endabgabe {
         let responseText: string = JSON.parse(await response.text());
 
         console.log(responseText);
-        let div: HTMLElement = document.createElement("div");
-        div.setAttribute("id", "Bestellungen");
-        
+
         let order: HTMLParagraphElement = document.createElement("p");
-        order.innerHTML = "hello" + responseText;
-        
+        order.innerHTML = "hello" + responseText.toString();
+
         div.appendChild(order);
         main.appendChild(div);
-    
+
         //console.log(url);
         //await fetch(url);
 
