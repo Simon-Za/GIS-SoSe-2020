@@ -42,6 +42,7 @@ var Endabgabe;
                 storeOrder(url.query);
             }
             if (url.pathname == "/getData") {
+                console.log("getData thingy");
                 _response.write(JSON.stringify(orders.find()));
                 //storeOrder(url.query);
             }
