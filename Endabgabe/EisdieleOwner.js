@@ -12,7 +12,7 @@ var Endabgabe;
         let responseText = JSON.parse(await response.text());
         console.log(responseText);
         let order = document.createElement("p");
-        order.innerHTML = responseText;
+        order.innerHTML = "hello";
         document.getElementById("Bestellübersicht")?.appendChild(order);
         //console.log(url);
         //await fetch(url);

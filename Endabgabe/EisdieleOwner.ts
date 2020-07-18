@@ -16,7 +16,7 @@ namespace Endabgabe {
 
         console.log(responseText);
         let order: HTMLParagraphElement = document.createElement("p");
-        order.innerHTML = responseText;
+        order.innerHTML = "hello";
         document.getElementById("Bestellübersicht")?.appendChild(order);
     
         //console.log(url);
