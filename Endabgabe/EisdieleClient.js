@@ -1,7 +1,7 @@
 "use strict";
 var Endabgabe;
 (function (Endabgabe) {
-    document.getElementById("servershit")?.addEventListener("click", sendData);
+    document.getElementById("sendButon")?.addEventListener("click", sendData);
     let counter = parseInt(localStorage.getItem("counter"));
     async function sendData() {
         let formData = new FormData(document.forms[0]);

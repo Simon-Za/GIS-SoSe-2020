@@ -1,6 +1,6 @@
 namespace Endabgabe {
 
-    document.getElementById("servershit")?.addEventListener("click", sendData);
+    document.getElementById("sendButon")?.addEventListener("click", sendData);
 
     let counter: number = parseInt(localStorage.getItem("counter")!);
 
