@@ -39,16 +39,16 @@ namespace Endabgabe {
 
         let order: HTMLParagraphElement = document.createElement("p");
         order.innerHTML = diesdas.id + "<br>";
-        order.innerHTML = diesdas.name + "<br>";
-        order.innerHTML = diesdas.address + "<br>";
-        order.innerHTML = diesdas.Comment + "<br>";
-        order.innerHTML = diesdas.Vessel + "<br>";
-        order.innerHTML = diesdas.Flavor1 + "<br>";
-        order.innerHTML = diesdas.Flavor2 + "<br>";
-        order.innerHTML = diesdas.Flavor3 + "<br>";
-        order.innerHTML = diesdas.Sauce + "<br>";
-        order.innerHTML = diesdas.Topping + "<br>";
-        order.innerHTML = "hello";
+        order.innerHTML += diesdas.name + "<br>";
+        order.innerHTML += diesdas.address + "<br>";
+        order.innerHTML += diesdas.Comment + "<br>";
+        order.innerHTML += diesdas.Vessel + "<br>";
+        order.innerHTML += diesdas.Flavor1 + "<br>";
+        order.innerHTML += diesdas.Flavor2 + "<br>";
+        order.innerHTML += diesdas.Flavor3 + "<br>";
+        order.innerHTML += diesdas.Sauce + "<br>";
+        order.innerHTML += diesdas.Topping + "<br>";
+        order.innerHTML += "hello";
 
 
         div.appendChild(order);
