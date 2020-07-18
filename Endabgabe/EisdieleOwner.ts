@@ -3,20 +3,13 @@ namespace Endabgabe {
     document.getElementById("getButton")?.addEventListener("click", getData);
 
     //let counter: number = parseInt(localStorage.getItem("counter")!);
-
-    
-    
-    
-    
     
     async function getData(): Promise<void> {
-
-        
 
         let formData: FormData = new FormData(document.forms[0]);
         let url: string = "https://gissose2020.herokuapp.com";
         let query: URLSearchParams = new URLSearchParams(<any>formData);
-        url += "/getData?";
+        url += "/getData";
 
         let response: Response = await fetch(url);
         let responseText: string = JSON.parse(await response.text());

@@ -44,7 +44,7 @@ namespace Endabgabe {
         console.log("Listening");
     }
 
-    async function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void {
+    async function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): Promise<void> {
         console.log(_request.url);          //Bei einer Request wird etwas in der Konsole ausgegeben
 
         _response.setHeader("content-type", "text/html; charset=utf-8");    //Ein Header wird aufgebaut

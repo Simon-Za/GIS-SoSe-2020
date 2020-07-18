@@ -7,7 +7,7 @@ var Endabgabe;
         let formData = new FormData(document.forms[0]);
         let url = "https://gissose2020.herokuapp.com";
         let query = new URLSearchParams(formData);
-        url += "/getData?";
+        url += "/getData";
         let response = await fetch(url);
         let responseText = JSON.parse(await response.text());
         console.log(responseText);
