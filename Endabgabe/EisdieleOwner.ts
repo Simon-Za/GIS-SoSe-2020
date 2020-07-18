@@ -17,12 +17,12 @@ namespace Endabgabe {
         url += "/getData";
 
         let response: Response = await fetch(url);
-        let responseText: string = JSON.parse(await response.text());
+        let responseText: string = await response.text();
 
         console.log(responseText);
 
         let order: HTMLParagraphElement = document.createElement("p");
-        order.innerHTML = "hello" + responseText.toString();
+        order.innerHTML = "hello" + responseText;
 
         div.appendChild(order);
         main.appendChild(div);
