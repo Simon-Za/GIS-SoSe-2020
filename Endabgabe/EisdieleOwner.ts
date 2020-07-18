@@ -13,9 +13,9 @@ namespace Endabgabe {
 
         
 
-        //let formData: FormData = new FormData(document.forms[0]);
+        let formData: FormData = new FormData(document.forms[0]);
         let url: string = "https://gissose2020.herokuapp.com";
-        //let query: URLSearchParams = new URLSearchParams(<any>formData);
+        let query: URLSearchParams = new URLSearchParams(<any>formData);
         url += "/getData?";
 
         let response: Response = await fetch(url);
