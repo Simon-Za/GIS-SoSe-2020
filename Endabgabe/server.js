@@ -42,8 +42,8 @@ var Endabgabe;
                 storeOrder(url.query);
             }
             if (url.pathname == "/getData") {
-                console.log("getData thingy");
                 _response.write(JSON.stringify(await orders.find().toArray()));
+                console.log(JSON.stringify(await orders.find().toArray()));
                 //storeOrder(url.query);
             }
             /*  for (let key in url.query) {
