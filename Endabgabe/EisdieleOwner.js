@@ -6,6 +6,7 @@ var Endabgabe;
     //let counter: number = parseInt(localStorage.getItem("counter")!);
     let div = document.createElement("div");
     div.setAttribute("id", "Bestellungen");
+    main.appendChild(div);
     async function getData() {
         let formData = new FormData(document.forms[0]);
         let url = "https://gissose2020.herokuapp.com";
@@ -17,7 +18,6 @@ var Endabgabe;
         let order = document.createElement("p");
         order.innerHTML = "hello" + responseText;
         div.appendChild(order);
-        main.appendChild(div);
         //console.log(url);
         //await fetch(url);
         //let response: Response = await fetch(url);

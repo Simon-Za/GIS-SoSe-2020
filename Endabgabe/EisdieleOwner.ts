@@ -7,6 +7,7 @@ namespace Endabgabe {
 
     let div: HTMLElement = document.createElement("div");
     div.setAttribute("id", "Bestellungen");
+    main.appendChild(div);
 
 
     async function getData(): Promise<void> {
@@ -25,7 +26,7 @@ namespace Endabgabe {
         order.innerHTML = "hello" + responseText;
 
         div.appendChild(order);
-        main.appendChild(div);
+
 
         //console.log(url);
         //await fetch(url);
