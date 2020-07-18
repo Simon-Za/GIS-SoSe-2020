@@ -1,5 +1,17 @@
 namespace Endabgabe {
 
+    interface Bestellung {
+        id: string;
+        address: string;
+        Comment: string;
+        Vessel: string;
+        Flavor1: string;
+        Flavor2?: string;
+        Flavor3?: string;
+        Sauce: string;
+        Topping: string;
+    }
+
     document.getElementById("getButton")?.addEventListener("click", getData);
     let main: HTMLElement = document.getElementById("main") as HTMLElement;
     //let counter: number = parseInt(localStorage.getItem("counter")!);
@@ -19,10 +31,13 @@ namespace Endabgabe {
 
         let response: Response = await fetch(url);
         let responseText: string = await response.text();
+        let diesdas: Bestellung = JSON.parse(responseText);
 
+        
         console.log(JSON.parse(responseText));
+        console.log(diesdas);
         let order: HTMLParagraphElement = document.createElement("p");
-        order.innerHTML = "hello" + responseText;
+        order.innerHTML = "hello" + diesdas;
 
 
         div.appendChild(order);

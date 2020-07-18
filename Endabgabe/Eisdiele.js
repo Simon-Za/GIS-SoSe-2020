@@ -43,7 +43,7 @@ var Endabgabe;
     }
     function addFlavorFunc(_event) {
         counter++;
-        if (counter >= 4) {
+        if (counter >= 3) {
             clickNextSauce();
         }
         let target = _event.target;

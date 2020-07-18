@@ -51,7 +51,7 @@ namespace Endabgabe {
 
     function addFlavorFunc(_event: Event): void {
         counter++;
-        if (counter >= 4) {
+        if (counter >= 3) {
             clickNextSauce();
         }
 
