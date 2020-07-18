@@ -23,7 +23,8 @@ namespace Endabgabe {
         console.log(responseText);
 
         let order: HTMLParagraphElement = document.createElement("p");
-        order.innerHTML = "hello" + responseText;
+        order.innerHTML = "hello" + JSON.parse(responseText);
+        console.log(JSON.parse(responseText));
 
         div.appendChild(order);
 
