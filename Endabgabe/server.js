@@ -30,7 +30,7 @@ var Endabgabe;
     function handleListen() {
         console.log("Listening");
     }
-    function handleRequest(_request, _response) {
+    async function handleRequest(_request, _response) {
         console.log(_request.url); //Bei einer Request wird etwas in der Konsole ausgegeben
         _response.setHeader("content-type", "text/html; charset=utf-8"); //Ein Header wird aufgebaut
         _response.setHeader("Access-Control-Allow-Origin", "*");
@@ -43,7 +43,7 @@ var Endabgabe;
             }
             if (url.pathname == "/getData") {
                 console.log("getData thingy");
-                _response.write(JSON.stringify(orders.find()));
+                _response.write(JSON.stringify(await orders.find().toArray()));
                 //storeOrder(url.query);
             }
             /*  for (let key in url.query) {

@@ -44,7 +44,7 @@ namespace Endabgabe {
         console.log("Listening");
     }
 
-    function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void {
+    async function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void {
         console.log(_request.url);          //Bei einer Request wird etwas in der Konsole ausgegeben
 
         _response.setHeader("content-type", "text/html; charset=utf-8");    //Ein Header wird aufgebaut
@@ -63,7 +63,7 @@ namespace Endabgabe {
             if (url.pathname == "/getData") {
                 console.log("getData thingy");
                 
-                _response.write(JSON.stringify(orders.find()));
+                _response.write(JSON.stringify(await orders.find().toArray()));
                 //storeOrder(url.query);
             }
 
