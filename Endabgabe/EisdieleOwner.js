@@ -2,6 +2,7 @@
 var Endabgabe;
 (function (Endabgabe) {
     document.getElementById("getButton")?.addEventListener("click", getData);
+    let main = document.getElementById("main");
     //let counter: number = parseInt(localStorage.getItem("counter")!);
     async function getData() {
         let formData = new FormData(document.forms[0]);
@@ -11,9 +12,12 @@ var Endabgabe;
         let response = await fetch(url);
         let responseText = JSON.parse(await response.text());
         console.log(responseText);
+        let div = document.createElement("div");
+        div.setAttribute("id", "Bestellungen");
         let order = document.createElement("p");
         order.innerHTML = "hello";
-        document.getElementById("Bestellübersicht").appendChild(order);
+        div.appendChild(order);
+        main.appendChild(div);
         //console.log(url);
         //await fetch(url);
         //let response: Response = await fetch(url);
