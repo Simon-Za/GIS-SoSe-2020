@@ -38,16 +38,15 @@ namespace Endabgabe {
         console.log(diesdas);
 
         let order: HTMLParagraphElement = document.createElement("p");
-        order.innerHTML =  diesdas[0].id + "<br>";
-        order.innerHTML += diesdas[0].name + "<br>";
-        order.innerHTML += diesdas[0].address + "<br>";
-        order.innerHTML += diesdas[0].Comment + "<br>";
-        order.innerHTML += diesdas[0].Vessel + "<br>";
-        order.innerHTML += diesdas[0].Flavor1 + "<br>";
-        order.innerHTML += diesdas[0].Flavor2 + "<br>";
-        order.innerHTML += diesdas[0].Flavor3 + "<br>";
-        order.innerHTML += diesdas[0].Sauce + "<br>";
-        order.innerHTML += diesdas[0 ].Topping + "<br>";
+        order.innerHTML += "Name" + diesdas[0].name + "<br>";
+        order.innerHTML += "Addres" + diesdas[0].address + "<br>";
+        order.innerHTML += "Comment" + diesdas[0].Comment + "<br>";
+        order.innerHTML += "Vessel" + diesdas[0].Vessel + "<br>";
+        order.innerHTML += "Flavor1" + diesdas[0].Flavor1 + "<br>";
+        order.innerHTML += "Flavor2" + diesdas[0].Flavor2 + "<br>";
+        order.innerHTML += "FLavor3" + diesdas[0].Flavor3 + "<br>";
+        order.innerHTML += "Sauce" + diesdas[0].Sauce + "<br>";
+        order.innerHTML += "Topping" + diesdas[0 ].Topping + "<br>";
         order.innerHTML += "hello";
 
 
