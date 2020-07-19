@@ -16,22 +16,24 @@ var Endabgabe;
         let responseText = await response.text();
         let diesdas = JSON.parse(responseText);
         console.log(diesdas);
-        let order = document.createElement("p");
-        order.innerHTML += "Name: " + diesdas[0].name + "<br>";
-        order.innerHTML += "Address: " + diesdas[0].address + "<br>";
-        order.innerHTML += "Comment: " + diesdas[0].Comment + "<br>";
-        order.innerHTML += "Vessel: " + diesdas[0].Vessel + "<br>";
-        order.innerHTML += "Flavor1: " + Endabgabe.addFlavorList[parseInt(diesdas[0].Flavor1)].parentElement?.children[1] + "<br>";
-        if (diesdas[0].Flavor2 != null) {
-            order.innerHTML += "Flavor2: " + Endabgabe.addFlavorList[parseInt(diesdas[0].Flavor2)].parentElement?.children[1] + "<br>";
+        for (let i = 0; i <= diesdas.length; i++) {
+            let order = document.createElement("p");
+            order.innerHTML += "Name: " + diesdas[i].name + "<br>";
+            order.innerHTML += "Address: " + diesdas[i].address + "<br>";
+            order.innerHTML += "Comment: " + diesdas[i].Comment + "<br>";
+            order.innerHTML += "Vessel: " + diesdas[i].Vessel + "<br>";
+            order.innerHTML += "Flavor1: " + Endabgabe.addFlavorList[parseInt(diesdas[i].Flavor1)].parentElement?.children[1] + "<br>";
+            if (diesdas[i].Flavor2 != undefined) {
+                order.innerHTML += "Flavor2: " + Endabgabe.addFlavorList[parseInt(diesdas[i].Flavor2)].parentElement?.children[1] + "<br>";
+            }
+            if (diesdas[i].Flavor3 != null) {
+                order.innerHTML += "FLavor3: " + Endabgabe.addFlavorList[parseInt(diesdas[i].Flavor3)].parentElement?.children[1] + "<br>";
+            }
+            order.innerHTML += "Sauce: " + diesdas[i].Sauce + "<br>";
+            order.innerHTML += "Topping: " + diesdas[i].Topping + "<br>";
+            order.innerHTML += "hello";
+            div.appendChild(order);
         }
-        if (diesdas[0].Flavor3 != null) {
-            order.innerHTML += "FLavor3: " + Endabgabe.addFlavorList[parseInt(diesdas[0].Flavor3)].parentElement?.children[1] + "<br>";
-        }
-        order.innerHTML += "Sauce: " + diesdas[0].Sauce + "<br>";
-        order.innerHTML += "Topping: " + diesdas[0].Topping + "<br>";
-        order.innerHTML += "hello";
-        div.appendChild(order);
         //console.log(url);
         //await fetch(url);
         //let response: Response = await fetch(url);

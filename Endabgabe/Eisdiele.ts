@@ -1,5 +1,8 @@
 namespace Endabgabe {
 
+    localStorage.setItem("Flavor2" , "null");
+    localStorage.setItem("Flavor3" , "null");
+
     //Entscheidung Waffel/Becher; entfernen der alten und spawnen der neuen Section
     let cone: HTMLElement = <HTMLElement>document.getElementById("Cone");
     cone?.addEventListener("click", chooseCone);

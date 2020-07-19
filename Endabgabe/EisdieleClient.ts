@@ -2,7 +2,6 @@ namespace Endabgabe {
 
     document.getElementById("sendButon")?.addEventListener("click", sendData);
 
-    let counter: number = parseInt(localStorage.getItem("counter")!);
 
     async function sendData(): Promise<void> {
 
@@ -11,6 +10,8 @@ namespace Endabgabe {
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         url += "/sendData?" + query.toString() + "&Vessel=" + localStorage.getItem("Vessel");
 
+        let counter: number = parseInt(localStorage.getItem("counter")!);
+        
         for (let i: number = 1; i <= counter; i++) {
             url += "&Flavor" + i + "=" + localStorage.getItem("Flavor" + i);  
         }
