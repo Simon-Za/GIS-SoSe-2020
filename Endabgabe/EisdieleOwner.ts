@@ -38,7 +38,7 @@ namespace Endabgabe {
         console.log(diesdas);
 
         let order: HTMLParagraphElement = document.createElement("p");
-        order.innerHTML = diesdas.id + "<br>";
+        order.innerHTML = diesdas.id.toString + "<br>";
         order.innerHTML += diesdas.name + "<br>";
         order.innerHTML += diesdas.address + "<br>";
         order.innerHTML += diesdas.Comment + "<br>";
