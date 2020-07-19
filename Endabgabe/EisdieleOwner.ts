@@ -32,22 +32,22 @@ namespace Endabgabe {
 
         let response: Response = await fetch(url);
         let responseText: string = await response.text();
-        let diesdas: Bestellung = JSON.parse(responseText);
+        let diesdas: Bestellung[] = JSON.parse(responseText);
 
         
         console.log(diesdas);
 
         let order: HTMLParagraphElement = document.createElement("p");
-        order.innerHTML =  diesdas.id + "<br>";
-        order.innerHTML += diesdas.name + "<br>";
-        order.innerHTML += diesdas.address + "<br>";
-        order.innerHTML += diesdas.Comment + "<br>";
-        order.innerHTML += diesdas.Vessel + "<br>";
-        order.innerHTML += diesdas.Flavor1 + "<br>";
-        order.innerHTML += diesdas.Flavor2 + "<br>";
-        order.innerHTML += diesdas.Flavor3 + "<br>";
-        order.innerHTML += diesdas.Sauce + "<br>";
-        order.innerHTML += diesdas.Topping + "<br>";
+        order.innerHTML =  diesdas[0].id + "<br>";
+        order.innerHTML += diesdas[0].name + "<br>";
+        order.innerHTML += diesdas[0].address + "<br>";
+        order.innerHTML += diesdas[0].Comment + "<br>";
+        order.innerHTML += diesdas[0].Vessel + "<br>";
+        order.innerHTML += diesdas[0].Flavor1 + "<br>";
+        order.innerHTML += diesdas[0].Flavor2 + "<br>";
+        order.innerHTML += diesdas[0].Flavor3 + "<br>";
+        order.innerHTML += diesdas[0].Sauce + "<br>";
+        order.innerHTML += diesdas[0 ].Topping + "<br>";
         order.innerHTML += "hello";
 
 
