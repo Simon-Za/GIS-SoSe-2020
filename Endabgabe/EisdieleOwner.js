@@ -21,9 +21,13 @@ var Endabgabe;
         order.innerHTML += "Address: " + diesdas[0].address + "<br>";
         order.innerHTML += "Comment: " + diesdas[0].Comment + "<br>";
         order.innerHTML += "Vessel: " + diesdas[0].Vessel + "<br>";
-        order.innerHTML += "Flavor1: " + diesdas[0].Flavor1 + "<br>";
-        order.innerHTML += "Flavor2: " + diesdas[0].Flavor2 + "<br>";
-        order.innerHTML += "FLavor3: " + diesdas[0].Flavor3 + "<br>";
+        order.innerHTML += "Flavor1: " + Endabgabe.addFlavorList[parseInt(diesdas[0].Flavor1)].parentElement?.children[1] + "<br>";
+        if (diesdas[0].Flavor2 != null) {
+            order.innerHTML += "Flavor2: " + Endabgabe.addFlavorList[parseInt(diesdas[0].Flavor2)].parentElement?.children[1] + "<br>";
+        }
+        if (diesdas[0].Flavor3 != null) {
+            order.innerHTML += "FLavor3: " + Endabgabe.addFlavorList[parseInt(diesdas[0].Flavor3)].parentElement?.children[1] + "<br>";
+        }
         order.innerHTML += "Sauce: " + diesdas[0].Sauce + "<br>";
         order.innerHTML += "Topping: " + diesdas[0].Topping + "<br>";
         order.innerHTML += "hello";

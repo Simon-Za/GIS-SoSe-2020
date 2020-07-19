@@ -38,7 +38,7 @@ namespace Endabgabe {
     //Flavors Indizes geben und eventListener adden
     let counter: number = 0;
 
-    const addFlavorList: NodeListOf<Element> = document.querySelectorAll(".addFlavor");
+    export const addFlavorList: NodeListOf<Element> = document.querySelectorAll(".addFlavor");
     console.log(addFlavorList);
 
 

@@ -34,10 +34,10 @@ var Endabgabe;
  */
     //Flavors Indizes geben und eventListener adden
     let counter = 0;
-    const addFlavorList = document.querySelectorAll(".addFlavor");
-    console.log(addFlavorList);
-    for (let index = 0; index < addFlavorList.length; index++) {
-        let addFlavor = addFlavorList[index];
+    Endabgabe.addFlavorList = document.querySelectorAll(".addFlavor");
+    console.log(Endabgabe.addFlavorList);
+    for (let index = 0; index < Endabgabe.addFlavorList.length; index++) {
+        let addFlavor = Endabgabe.addFlavorList[index];
         addFlavor.setAttribute("flavorIndex", index.toString());
         addFlavor.addEventListener("click", addFlavorFunc);
     }
