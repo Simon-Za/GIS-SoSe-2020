@@ -27,9 +27,9 @@ namespace Endabgabe {
 
     async function getData(): Promise<void> {
 
-        let formData: FormData = new FormData(document.forms[0]);
+        //let formData: FormData = new FormData(document.forms[0]);
         let url: string = "https://gissose2020.herokuapp.com";
-        let query: URLSearchParams = new URLSearchParams(<any>formData);
+        //let query: URLSearchParams = new URLSearchParams(<any>formData);
         url += "/getData";
 
         let response: Response = await fetch(url);
@@ -38,20 +38,21 @@ namespace Endabgabe {
 
 
         console.log(diesdas);
-        for (let i: number = 0; i <= diesdas.length; i++) {
+        for (let i: number = 0; i < diesdas.length; i++) {
 
             let order: HTMLParagraphElement = document.createElement("p");
+            order.innerHTML += "Order: " + i + 1;
             order.innerHTML += "Name: " + diesdas[i].name + "<br>";
             order.innerHTML += "Address: " + diesdas[i].address + "<br>";
             order.innerHTML += "Comment: " + diesdas[i].Comment + "<br>";
             order.innerHTML += "Vessel: " + diesdas[i].Vessel + "<br>";
-           /*  order.innerHTML += "Flavor1: " + addFlavorList[parseInt(diesdas[i].Flavor1)].parentElement?.children[1] + "<br>";
+            order.innerHTML += "Flavor1: " + addFlavorList[parseInt(diesdas[i].Flavor1)].parentElement?.children[1] + "<br>";
             if (diesdas[i].Flavor2 != null) {
                 order.innerHTML += "Flavor2: " + addFlavorList[parseInt(diesdas[i].Flavor2)].parentElement?.children[1] + "<br>";
             }
             if (diesdas[i].Flavor3 != null) {
                 order.innerHTML += "FLavor3: " + addFlavorList[parseInt(diesdas[i].Flavor3)].parentElement?.children[1] + "<br>";
-            } */
+            }
             order.innerHTML += "Sauce: " + diesdas[i].Sauce + "<br>";
             order.innerHTML += "Topping: " + diesdas[i].Topping + "<br>";
             order.innerHTML += "hellooo";

@@ -9,27 +9,28 @@ var Endabgabe;
     div.setAttribute("id", "Bestellungen");
     main.appendChild(div);
     async function getData() {
-        let formData = new FormData(document.forms[0]);
+        //let formData: FormData = new FormData(document.forms[0]);
         let url = "https://gissose2020.herokuapp.com";
-        let query = new URLSearchParams(formData);
+        //let query: URLSearchParams = new URLSearchParams(<any>formData);
         url += "/getData";
         let response = await fetch(url);
         let responseText = await response.text();
         let diesdas = JSON.parse(responseText);
         console.log(diesdas);
-        for (let i = 0; i <= diesdas.length; i++) {
+        for (let i = 0; i < diesdas.length; i++) {
             let order = document.createElement("p");
+            order.innerHTML += "Order: " + i + 1;
             order.innerHTML += "Name: " + diesdas[i].name + "<br>";
             order.innerHTML += "Address: " + diesdas[i].address + "<br>";
             order.innerHTML += "Comment: " + diesdas[i].Comment + "<br>";
             order.innerHTML += "Vessel: " + diesdas[i].Vessel + "<br>";
-            /*  order.innerHTML += "Flavor1: " + addFlavorList[parseInt(diesdas[i].Flavor1)].parentElement?.children[1] + "<br>";
-             if (diesdas[i].Flavor2 != null) {
-                 order.innerHTML += "Flavor2: " + addFlavorList[parseInt(diesdas[i].Flavor2)].parentElement?.children[1] + "<br>";
-             }
-             if (diesdas[i].Flavor3 != null) {
-                 order.innerHTML += "FLavor3: " + addFlavorList[parseInt(diesdas[i].Flavor3)].parentElement?.children[1] + "<br>";
-             } */
+            order.innerHTML += "Flavor1: " + Endabgabe.addFlavorList[parseInt(diesdas[i].Flavor1)].parentElement?.children[1] + "<br>";
+            if (diesdas[i].Flavor2 != null) {
+                order.innerHTML += "Flavor2: " + Endabgabe.addFlavorList[parseInt(diesdas[i].Flavor2)].parentElement?.children[1] + "<br>";
+            }
+            if (diesdas[i].Flavor3 != null) {
+                order.innerHTML += "FLavor3: " + Endabgabe.addFlavorList[parseInt(diesdas[i].Flavor3)].parentElement?.children[1] + "<br>";
+            }
             order.innerHTML += "Sauce: " + diesdas[i].Sauce + "<br>";
             order.innerHTML += "Topping: " + diesdas[i].Topping + "<br>";
             order.innerHTML += "hellooo";
