@@ -17,6 +17,7 @@ var Endabgabe;
         let responseText = await response.text();
         let diesdas = JSON.parse(responseText);
         console.log(diesdas);
+        console.log(Endabgabe.addFlavorList);
         for (let i = 0; i < diesdas.length; i++) {
             let order = document.createElement("p");
             order.innerHTML += "Order: " + i + 1;

@@ -38,6 +38,8 @@ namespace Endabgabe {
 
 
         console.log(diesdas);
+        console.log(addFlavorList);
+        
         for (let i: number = 0; i < diesdas.length; i++) {
 
             let order: HTMLParagraphElement = document.createElement("p");
