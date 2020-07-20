@@ -1,6 +1,7 @@
 import * as Http from "http";
 import * as Url from "url";
 import * as Mongo from "mongodb";
+import { ParsedUrlQuery } from "querystring";
 
 namespace Endabgabe {
 
@@ -65,6 +66,14 @@ namespace Endabgabe {
                 _response.write(JSON.stringify(await orders.find().toArray()));
                 console.log(JSON.stringify(await orders.find().toArray()));
                 //storeOrder(url.query);
+            }
+
+            // Source: https://github.com/Plagiatus/GIS_SoSe2020/blob/master/Aufgabe11/Server/database.ts#L29
+            if (url.pathname == "/deleteItem") {
+                let query: ParsedUrlQuery = url.query;
+                let id: string = <string>query["id"];
+                let mongoId: Mongo.ObjectID = new Mongo.ObjectID(id);
+                _response.write(JSON.stringify(await orders.deleteOne({"_id": mongoId})));
             }
 
 

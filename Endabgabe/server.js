@@ -47,6 +47,13 @@ var Endabgabe;
                 console.log(JSON.stringify(await orders.find().toArray()));
                 //storeOrder(url.query);
             }
+            // Source: https://github.com/Plagiatus/GIS_SoSe2020/blob/master/Aufgabe11/Server/database.ts#L29
+            if (url.pathname == "/deleteItem") {
+                let query = url.query;
+                let id = query["id"];
+                let mongoId = new Mongo.ObjectID(id);
+                _response.write(JSON.stringify(await orders.deleteOne({ "_id": mongoId })));
+            }
             /*  for (let key in url.query) {
                   _response.write(key + ": " + url.query[key]);
               }*/
