@@ -1,7 +1,7 @@
 namespace Endabgabe {
 
-    localStorage.setItem("Flavor2" , "null");
-    localStorage.setItem("Flavor3" , "null");
+    localStorage.setItem("Flavor2", "null");
+    localStorage.setItem("Flavor3", "null");
 
     //Entscheidung Waffel/Becher; entfernen der alten und spawnen der neuen Section
     let cone: HTMLElement = <HTMLElement>document.getElementById("Cone");
@@ -66,7 +66,7 @@ namespace Endabgabe {
         document.getElementById("preview")?.appendChild(flavorImg);
         /*iwas mit local storage kommt hier noch rein*/
         localStorage.setItem("Flavor" + counter, flavorIndex.toString());
-        localStorage.setItem("counter",  counter.toString());
+        localStorage.setItem("counter", counter.toString());
     }
 
     //Soßen Indizes geben und eventListener adden
@@ -129,29 +129,34 @@ namespace Endabgabe {
         localStorage.setItem("Topping", toppingIndex.toString());
     }
 
+    document.getElementById("newOrder")?.addEventListener("click", newOrder);
+
+    function newOrder(): void {
+        location.replace("Eisdiele.html"/* "https://simon-za.github.io/GIS-SoSe-2020/Endabgabe/Eisdiele.html" */);
+    }
 
     //Weiterleitung zur nächsten Seite
 
     function clickNextSauce(): void {
-        top.location.replace("EisdieleSauce.html");
+        top.location.replace("EisdieleSauce.html" /* "https://simon-za.github.io/GIS-SoSe-2020/Endabgabe/EisdieleSauce.html" */);
     }
 
 
     document.getElementById("nextSauce")?.addEventListener("click", openSauce);
 
     function openSauce(): void {
-        location.replace("EisdieleSauce.html");
+        location.replace("EisdieleSauce.html" /* "https://simon-za.github.io/GIS-SoSe-2020/Endabgabe/EisdieleSauce.html" */);
     }
 
     document.getElementById("nextToppings")?.addEventListener("click", openToppings);
 
     function openToppings(): void {
-        location.replace("EisdieleToppings.html");
+        location.replace("EisdieleToppings.html" /* "https://simon-za.github.io/GIS-SoSe-2020/Endabgabe/EisdieleToppings.html" */);
     }
 
     document.getElementById("nextOrder")?.addEventListener("click", openOrder);
 
     function openOrder(): void {
-        location.replace("EisdieleOrder.html");
+        location.replace("EisdieleOrder.html"/*  "https://simon-za.github.io/GIS-SoSe-2020/Endabgabe/EisdieleOrder.html" */);
     }
 }

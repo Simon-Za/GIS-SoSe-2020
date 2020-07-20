@@ -43,7 +43,7 @@ namespace Endabgabe {
             order.innerHTML += "Address: " + diesdas[i].address + "<br>";
             order.innerHTML += "Comment: " + diesdas[i].Comment + "<br>";
             order.innerHTML += "Vessel: " + diesdas[i].Vessel + "<br>";
-            order.innerHTML += "Flavor1: " + addFlavorList[parseInt(diesdas[i].Flavor1)].parentElement?.children[1] + "<br>";
+            order.innerHTML += "Flavor1: " + addFlavorList[parseInt(diesdas[i].Flavor1!)].parentElement?.children[1] + "<br>";
             if (diesdas[i].Flavor2 != undefined) {
                 order.innerHTML += "Flavor2: " + addFlavorList[parseInt(diesdas[i].Flavor2!)].parentElement?.children[1] + "<br>";
             }

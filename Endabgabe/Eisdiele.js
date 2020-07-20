@@ -103,21 +103,25 @@ var Endabgabe;
         /*iwas mit local storage kommt hier noch rein*/
         localStorage.setItem("Topping", toppingIndex.toString());
     }
+    document.getElementById("newOrder")?.addEventListener("click", newOrder);
+    function newOrder() {
+        location.replace("Eisdiele.html" /* "https://simon-za.github.io/GIS-SoSe-2020/Endabgabe/Eisdiele.html" */);
+    }
     //Weiterleitung zur nächsten Seite
     function clickNextSauce() {
-        top.location.replace("EisdieleSauce.html");
+        top.location.replace("EisdieleSauce.html" /* "https://simon-za.github.io/GIS-SoSe-2020/Endabgabe/EisdieleSauce.html" */);
     }
     document.getElementById("nextSauce")?.addEventListener("click", openSauce);
     function openSauce() {
-        location.replace("EisdieleSauce.html");
+        location.replace("EisdieleSauce.html" /* "https://simon-za.github.io/GIS-SoSe-2020/Endabgabe/EisdieleSauce.html" */);
     }
     document.getElementById("nextToppings")?.addEventListener("click", openToppings);
     function openToppings() {
-        location.replace("EisdieleToppings.html");
+        location.replace("EisdieleToppings.html" /* "https://simon-za.github.io/GIS-SoSe-2020/Endabgabe/EisdieleToppings.html" */);
     }
     document.getElementById("nextOrder")?.addEventListener("click", openOrder);
     function openOrder() {
-        location.replace("EisdieleOrder.html");
+        location.replace("EisdieleOrder.html" /*  "https://simon-za.github.io/GIS-SoSe-2020/Endabgabe/EisdieleOrder.html" */);
     }
 })(Endabgabe || (Endabgabe = {}));
 //# sourceMappingURL=Eisdiele.js.map
