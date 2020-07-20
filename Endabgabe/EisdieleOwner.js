@@ -25,26 +25,24 @@ var Endabgabe;
             order.innerHTML += "Address: " + diesdas[i].address + "<br>";
             order.innerHTML += "Comment: " + diesdas[i].Comment + "<br>";
             order.innerHTML += "Vessel: " + diesdas[i].Vessel + "<br>";
-            order.innerHTML += "Flavor1: " + Endabgabe.addFlavorList[parseInt(diesdas[i].Flavor1)].parentElement?.children[1] + "<br>";
-            if (diesdas[i].Flavor2 != null) {
-                order.innerHTML += "Flavor2: " + Endabgabe.addFlavorList[parseInt(diesdas[i].Flavor2)].parentElement?.children[1] + "<br>";
-            }
-            if (diesdas[i].Flavor3 != null) {
-                order.innerHTML += "FLavor3: " + Endabgabe.addFlavorList[parseInt(diesdas[i].Flavor3)].parentElement?.children[1] + "<br>";
-            }
+            order.innerHTML += "Flavor1: " + Endabgabe.addFlavorList[parseInt(diesdas[i].Flavor1)].parentElement?.children[1].textContent + "<br>";
+            /*  if (diesdas[i].Flavor2 != null) {
+                 order.innerHTML += "Flavor2: " + addFlavorList[parseInt(diesdas[i].Flavor2)].parentElement?.children[1] + "<br>";
+             }
+             if (diesdas[i].Flavor3 != null) {
+                 order.innerHTML += "FLavor3: " + addFlavorList[parseInt(diesdas[i].Flavor3)].parentElement?.children[1] + "<br>";
+             } */
             order.innerHTML += "Sauce: " + diesdas[i].Sauce + "<br>";
             order.innerHTML += "Topping: " + diesdas[i].Topping + "<br>";
             order.innerHTML += "hellooo";
-            let deleteOrder = document.createElement("button");
+            /* let deleteOrder: HTMLButtonElement = document.createElement("button");
             deleteOrder.innerHTML = "delete Order";
-            deleteOrder.setAttribute("id", "deleteOrder");
-            //deleteOrder.addEventListener("click", deleteOrderFunc);
-            /*  function deleteOrderFunc(): void {
-                 diesdas[i].deleteOne();
-             }
- 
- 
-             div.appendChild(deleteOrder); */
+            deleteOrder.setAttribute("id", "deleteOrder" + i);
+            deleteOrder.addEventListener("click", deleteOrderFunc);
+
+
+
+            div.appendChild(deleteOrder);  */
             div.appendChild(order);
         }
         //console.log(url);
@@ -52,6 +50,11 @@ var Endabgabe;
         //let response: Response = await fetch(url);
         //let responseText: string = await response.text();
     }
+    /* async function deleteOrderFunc(_event: Event): Promise<void> {
+
+
+            diesdas[i].deleteOne();
+    }  */
     /* async function sendData(): Promise<void> {
 
         let formData: FormData = new FormData(document.forms[0]);
