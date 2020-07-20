@@ -1,4 +1,5 @@
 "use strict";
+/* import { Db, MongoClient } from "mongodb"; */
 var Endabgabe;
 (function (Endabgabe) {
     document.getElementById("getButton")?.addEventListener("click", getData);
@@ -32,6 +33,16 @@ var Endabgabe;
             order.innerHTML += "Sauce: " + diesdas[i].Sauce + "<br>";
             order.innerHTML += "Topping: " + diesdas[i].Topping + "<br>";
             order.innerHTML += "hellooo";
+            let deleteOrder = document.createElement("button");
+            deleteOrder.innerHTML = "delete Order";
+            deleteOrder.setAttribute("id", "deleteOrder");
+            //deleteOrder.addEventListener("click", deleteOrderFunc);
+            /*  function deleteOrderFunc(): void {
+                 diesdas[i].deleteOne();
+             }
+ 
+ 
+             div.appendChild(deleteOrder); */
             div.appendChild(order);
         }
         //console.log(url);

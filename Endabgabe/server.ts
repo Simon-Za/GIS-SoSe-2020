@@ -32,7 +32,7 @@ namespace Endabgabe {
         server.listen(_port);                          //Der server wird auf den port gesetzt der oben bestimmt wurde
     }
 
-    async function connectToDatabase(_url: string): Promise<void> {
+    export async function connectToDatabase(_url: string): Promise<void> {
         let options: Mongo.MongoClientOptions = { useNewUrlParser: true, useUnifiedTopology: true };
         let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(_url, options);
         await mongoClient.connect();
@@ -61,7 +61,7 @@ namespace Endabgabe {
             }
 
             if (url.pathname == "/getData") {
-                
+
                 _response.write(JSON.stringify(await orders.find().toArray()));
                 console.log(JSON.stringify(await orders.find().toArray()));
                 //storeOrder(url.query);

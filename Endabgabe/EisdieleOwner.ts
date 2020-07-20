@@ -1,3 +1,5 @@
+/* import { Db, MongoClient } from "mongodb"; */
+
 namespace Endabgabe {
 
     interface Bestellung {
@@ -54,7 +56,17 @@ namespace Endabgabe {
             order.innerHTML += "Topping: " + diesdas[i].Topping + "<br>";
             order.innerHTML += "hellooo";
 
+            let deleteOrder: HTMLButtonElement = document.createElement("button");
+            deleteOrder.innerHTML = "delete Order";
+            deleteOrder.setAttribute("id", "deleteOrder");
+            //deleteOrder.addEventListener("click", deleteOrderFunc);
 
+           /*  function deleteOrderFunc(): void {
+                diesdas[i].deleteOne();
+            }
+
+
+            div.appendChild(deleteOrder); */
             div.appendChild(order);
         }
 

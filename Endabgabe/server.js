@@ -27,6 +27,7 @@ var Endabgabe;
         orders = mongoClient.db("Endabgabe").collection("Orders");
         console.log("Database connection", orders != undefined);
     }
+    Endabgabe.connectToDatabase = connectToDatabase;
     function handleListen() {
         console.log("Listening");
     }
