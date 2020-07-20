@@ -23,7 +23,7 @@ var Endabgabe;
             order.innerHTML += "Comment: " + diesdas[i].Comment + "<br>";
             order.innerHTML += "Vessel: " + diesdas[i].Vessel + "<br>";
             order.innerHTML += "Flavor1: " + Endabgabe.addFlavorList[parseInt(diesdas[i].Flavor1)].parentElement?.children[1] + "<br>";
-            if (diesdas[i].Flavor2 != undefined) {
+            if (diesdas[i].Flavor2 != null) {
                 order.innerHTML += "Flavor2: " + Endabgabe.addFlavorList[parseInt(diesdas[i].Flavor2)].parentElement?.children[1] + "<br>";
             }
             if (diesdas[i].Flavor3 != null) {

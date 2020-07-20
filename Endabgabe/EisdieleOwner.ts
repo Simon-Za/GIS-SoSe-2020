@@ -7,8 +7,8 @@ namespace Endabgabe {
         Comment: string;
         Vessel: string;
         Flavor1: string;
-        Flavor2?: string;
-        Flavor3?: string;
+        Flavor2: string;
+        Flavor3: string;
         Sauce: string;
         Topping: string;
     }
@@ -43,12 +43,12 @@ namespace Endabgabe {
             order.innerHTML += "Address: " + diesdas[i].address + "<br>";
             order.innerHTML += "Comment: " + diesdas[i].Comment + "<br>";
             order.innerHTML += "Vessel: " + diesdas[i].Vessel + "<br>";
-            order.innerHTML += "Flavor1: " + addFlavorList[parseInt(diesdas[i].Flavor1!)].parentElement?.children[1] + "<br>";
-            if (diesdas[i].Flavor2 != undefined) {
-                order.innerHTML += "Flavor2: " + addFlavorList[parseInt(diesdas[i].Flavor2!)].parentElement?.children[1] + "<br>";
+            order.innerHTML += "Flavor1: " + addFlavorList[parseInt(diesdas[i].Flavor1)].parentElement?.children[1] + "<br>";
+            if (diesdas[i].Flavor2 != null) {
+                order.innerHTML += "Flavor2: " + addFlavorList[parseInt(diesdas[i].Flavor2)].parentElement?.children[1] + "<br>";
             }
             if (diesdas[i].Flavor3 != null) {
-                order.innerHTML += "FLavor3: " + addFlavorList[parseInt(diesdas[i].Flavor3!)].parentElement?.children[1] + "<br>";
+                order.innerHTML += "FLavor3: " + addFlavorList[parseInt(diesdas[i].Flavor3)].parentElement?.children[1] + "<br>";
             }
             order.innerHTML += "Sauce: " + diesdas[i].Sauce + "<br>";
             order.innerHTML += "Topping: " + diesdas[i].Topping + "<br>";
