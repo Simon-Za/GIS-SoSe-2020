@@ -295,6 +295,7 @@ namespace Endabgabe {
 async function deleteOrderFunc(_event: Event): Promise<void> {
     let target: HTMLElement = <HTMLElement>_event.target;
     let targetIndex: number = parseFloat(target.getAttribute("id")!);
+    console.log(targetIndex);
     let url: string = "https://gissose2020.herokuapp.com";
     url += "/deleteItem?" + "id=" + targetIndex;
 }

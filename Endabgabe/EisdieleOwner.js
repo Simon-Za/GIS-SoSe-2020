@@ -252,6 +252,7 @@ var Endabgabe;
 async function deleteOrderFunc(_event) {
     let target = _event.target;
     let targetIndex = parseFloat(target.getAttribute("id"));
+    console.log(targetIndex);
     let url = "https://gissose2020.herokuapp.com";
     url += "/deleteItem?" + "id=" + targetIndex;
 }

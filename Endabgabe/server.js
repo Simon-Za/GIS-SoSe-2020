@@ -59,23 +59,7 @@ var Endabgabe;
                 let mongoId = new Mongo.ObjectID(id);
                 orders.update({ "_id": mongoId }, { "Comment": "accepted" });
             }
-            /*  for (let key in url.query) {
-                  _response.write(key + ": " + url.query[key]);
-              }*/
         }
-        //_response.write("elloo");
-        /*  if (url.pathname == "/html") {
-              for (let key in url.query) {
-                  _response.write(key + " : " + url.query[key] + "<br>");
-              }
-          }
-          if (url.pathname == "/json") {
-              let jsonString: string = JSON.stringify(url.query);
-              // let jsonString: string = JSON.parse(JSON.stringify(url.query));
-              _response.write(jsonString);
-              console.log(jsonString);
-          }
-      }*/
         console.log("beep boop"); //Die URL wird auf die Seite geschrieben
         _response.end(); //die response endet
     }
