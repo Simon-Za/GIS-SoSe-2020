@@ -17,7 +17,8 @@ var Endabgabe;
         for (let i = 0; i < bestellungen.length; i++) {
             location.reload();
             let order = document.createElement("p");
-            order.innerHTML += "Order: " + i + 1 + "<br>";
+            let orderIndex = i + 1;
+            order.innerHTML += "Order: " + orderIndex + "<br>";
             order.innerHTML += "Name: " + bestellungen[i].name + "<br>";
             order.innerHTML += "Address: " + bestellungen[i].address + "<br>";
             order.innerHTML += "Comment: " + bestellungen[i].Comment + "<br>";

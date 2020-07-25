@@ -40,7 +40,8 @@ namespace Endabgabe {
             location.reload();
 
             let order: HTMLParagraphElement = document.createElement("p");
-            order.innerHTML += "Order: " + i + 1 + "<br>";
+            let orderIndex: number = i + 1;
+            order.innerHTML += "Order: " + orderIndex + "<br>";
             order.innerHTML += "Name: " + bestellungen[i].name + "<br>";
             order.innerHTML += "Address: " + bestellungen[i].address + "<br>";
             order.innerHTML += "Comment: " + bestellungen[i].Comment + "<br>";
