@@ -1,7 +1,64 @@
 namespace Endabgabe {
 
-    localStorage.setItem("Flavor2", "null");
-    localStorage.setItem("Flavor3", "null");
+    let counterF: number;
+    if (!localStorage.getItem("counter")) {
+        counterF = 0;
+    }
+    else {
+        counterF = parseInt(localStorage.getItem("counter")!);
+    }
+
+
+    //window.addEventListener("onload", darstellungLaden);
+    darstellungLaden();
+
+    function darstellungLaden(): void {
+
+      /*console.log("beepboop"); */
+
+        let vesselImg: HTMLElement = document.createElement("img");
+        if (localStorage.getItem("Vessel") == "Cone") {
+            //display cone           
+            vesselImg.setAttribute("src", "Bilder/Waffel2.png");
+            vesselImg.setAttribute("alt", "Cone");
+        }
+        if (localStorage.getItem("Vessel") == "Cup") {
+            //display cup
+            vesselImg.setAttribute("src", "Bilder/Cup2.svg");
+            vesselImg.setAttribute("alt", "Cup");
+        }
+        document.getElementById("preview")?.appendChild(vesselImg);
+
+        //display flavors
+        for (let i: number = 1; i <= counterF; i++) {
+            let flavorImg: HTMLImageElement = document.createElement("img");
+            let flavorIndex: number = parseInt(localStorage.getItem("Flavor" + i)!);
+            flavorImg.setAttribute("src", "Bilder/Flavors/Flavor" + flavorIndex + ".png");
+            flavorImg.setAttribute("id", "Scoop" + i);
+            flavorImg.setAttribute("class", "Flavour");
+            document.getElementById("preview")?.appendChild(flavorImg);
+        }
+
+        //display Sauce
+        if (localStorage.getItem("Sauce")) {
+            let sauceImg: HTMLElement = document.createElement("img");
+            let sauceIndex: number = parseInt(localStorage.getItem("Sauce")!);
+            sauceImg.setAttribute("src", "Bilder/sauces/DisplaySauces/Sauce" + sauceIndex + ".png");
+            sauceImg.setAttribute("alt", "Sauce" + sauceIndex);
+
+            if (counterF == 1) {
+                sauceImg.setAttribute("id", "Sauce1F");
+            }
+            if (counterF == 2) {
+                sauceImg.setAttribute("id", "Sauce2F");
+            }
+            if (counterF == 3) {
+                sauceImg.setAttribute("id", "Sauce3F");
+            }
+            document.getElementById("preview")?.appendChild(sauceImg);
+        }
+    }
+
 
     //Entscheidung Waffel/Becher; entfernen der alten und spawnen der neuen Section
     let cone: HTMLElement = <HTMLElement>document.getElementById("Cone");
@@ -11,6 +68,7 @@ namespace Endabgabe {
         document.getElementById("welcome")?.setAttribute("id", "chooseVesselInvis");
         document.getElementById("flavorsInvis")?.setAttribute("id", "fakeID");
         localStorage.setItem("Vessel", "Cone");
+        darstellungLaden();
     }
     let cup: HTMLElement = <HTMLElement>document.getElementById("Cup");
     cup?.addEventListener("click", chooseCup);
@@ -19,27 +77,11 @@ namespace Endabgabe {
         document.getElementById("welcome")?.setAttribute("id", "chooseVesselInvis");
         document.getElementById("flavorsInvis")?.setAttribute("id", "fakeID");
         localStorage.setItem("Vessel", "Cup");
+        darstellungLaden();
     }
 
-    //Auslesen des lc, um Darstellung festzulegen
-    /* if(localStorage.getItem("Vessel") == "Cone") {
-         //display cone
-         let img: HTMLElement = document.createElement("img");
-         img.setAttribute("src", /*hier Bild einfügen);
-         img.setAttribute("alt", "Cone");
-         document.getElementById("preview")?.appendChild(img);
-     }
-     if(localStorage.getItem("Vessel") == "Cup") {
-         //display cup
-         let img: HTMLElement = document.createElement("img");
-         img.setAttribute("src", /*hier Bild einfügen);
-         img.setAttribute("alt", "Cup");
-         document.getElementById("preview")?.appendChild(img);
-     }
- */
 
     //Flavors Indizes geben und eventListener adden
-    let counter: number = 0;
 
     export const addFlavorList: NodeListOf<Element> = document.querySelectorAll(".addFlavor");
     console.log(addFlavorList);
@@ -53,25 +95,42 @@ namespace Endabgabe {
 
 
     function addFlavorFunc(_event: Event): void {
-        counter++;
-        if (counter >= 3) {
-            clickNextSauce();
+        counterF++;
+        if (counterF == 3) {
+            openSauce();
         }
-
         let target: HTMLElement = <HTMLElement>_event.target;
         let flavorIndex: number = parseFloat(target.getAttribute("flavorIndex")!);
-        let flavorImg: HTMLElement = document.createElement("img");
-        /*  flavorImg.setAttribute("src", /*hier Bild einfügen + flavorIndex); */
+        let flavorImg: HTMLImageElement = document.createElement("img");
+        flavorImg.setAttribute("src", "Bilder/Flavors/Flavor" + flavorIndex + ".png");
         flavorImg.setAttribute("alt", "Flavor" + flavorIndex);
-        document.getElementById("preview")?.appendChild(flavorImg);
+        if (counterF == 1) {
+            flavorImg.setAttribute("id", "Scoop1");
+        }
+        if (counterF == 2) {
+            flavorImg.setAttribute("id", "Scoop2");
+        }
+        if (counterF == 3) {
+            flavorImg.setAttribute("id", "Scoop3");
+        }
+
+        flavorImg.setAttribute("class", "Flavour");
+        console.log(flavorImg);
+        document.getElementById("preview")!.appendChild(flavorImg);
         /*iwas mit local storage kommt hier noch rein*/
-        localStorage.setItem("Flavor" + counter, flavorIndex.toString());
-        localStorage.setItem("counter", counter.toString());
+        localStorage.setItem("Flavor" + counterF, flavorIndex.toString());
+        if (counterF < 3) {
+            localStorage.setItem("Flavor3", "null");
+        }
+        if (counterF < 2) {
+            localStorage.setItem("Flavor2", "null");
+        }
+        localStorage.setItem("counter", counterF.toString());
     }
 
     //Soßen Indizes geben und eventListener adden
     const addSauceList: NodeListOf<Element> = document.querySelectorAll(".addSauce");
-    console.log(addSauceList);
+    //console.log(addSauceList);
 
 
     for (let index: number = 0; index < addSauceList.length; index++) {
@@ -80,20 +139,30 @@ namespace Endabgabe {
         addSauce.addEventListener("click", addSauceFunc);
     }
 
-
+    let counterS: number = 0;
     function addSauceFunc(_event: Event): void {
-        counter++;
 
-        if (counter >= 1) {
+        counterS++;
+
+        if (counterS == 1) {
             openToppings();
         }
 
         let target: HTMLElement = <HTMLElement>_event.target;
         let sauceIndex: number = parseFloat(target.getAttribute("sauceIndex")!);
         let sauceImg: HTMLElement = document.createElement("img");
-        /*  sauceImg.setAttribute("src", /*hier Bild einfügen + sauceIndex); */
+        sauceImg.setAttribute("src", "Bilder/sauces/DisplaySauces/Sauce" + sauceIndex + ".png");
         sauceImg.setAttribute("alt", "Sauce" + sauceIndex);
-        sauceImg.setAttribute("id", "Scoop" + sauceIndex);
+        if (counterF == 1) {
+            sauceImg.setAttribute("id", "Sauce1F");
+        }
+        if (counterF == 2) {
+            sauceImg.setAttribute("id", "Sauce2F");
+        }
+        if (counterF == 3) {
+            sauceImg.setAttribute("id", "Sauce3F");
+        }
+
         document.getElementById("preview")?.appendChild(sauceImg);
         /*iwas mit local storage kommt hier noch rein*/
         localStorage.setItem("Sauce", sauceIndex.toString());
@@ -108,39 +177,35 @@ namespace Endabgabe {
     for (let index: number = 0; index < addToppingsList.length; index++) {
         let addTopping: Element = addToppingsList[index];
         addTopping.setAttribute("toppingIndex", index.toString());
-        addTopping.addEventListener("click", addToppingFunc);
+        //out of stock --> //addTopping.addEventListener("click", addToppingFunc);
     }
 
-
+    /* let counterT: number;
     function addToppingFunc(_event: Event): void {
-        counter++;
+        counterT++;
 
-        if (counter >= 1) {
+        if (counterT >= 1) {
             openOrder();
         }
 
         let target: HTMLElement = <HTMLElement>_event.target;
         let toppingIndex: number = parseFloat(target.getAttribute("toppingIndex")!);
         let toppingImg: HTMLElement = document.createElement("img");
-        /*  toppingImg.setAttribute("src", /*hier Bild einfügen + toppingIndex); */
+        toppingImg.setAttribute("src", //hier Bild einfügen + toppingIndex);
         toppingImg.setAttribute("alt", "Topping" + toppingIndex);
         document.getElementById("preview")?.appendChild(toppingImg);
-        /*iwas mit local storage kommt hier noch rein*/
+        //iwas mit local storage kommt hier noch rein
         localStorage.setItem("Topping", toppingIndex.toString());
-    }
+    } */
 
     document.getElementById("newOrder")?.addEventListener("click", newOrder);
 
     function newOrder(): void {
         location.replace("Eisdiele.html"/* "https://simon-za.github.io/GIS-SoSe-2020/Endabgabe/Eisdiele.html" */);
+        localStorage.clear();
     }
 
     //Weiterleitung zur nächsten Seite
-
-    function clickNextSauce(): void {
-        top.location.replace("EisdieleSauce.html" /* "https://simon-za.github.io/GIS-SoSe-2020/Endabgabe/EisdieleSauce.html" */);
-    }
-
 
     document.getElementById("nextSauce")?.addEventListener("click", openSauce);
 

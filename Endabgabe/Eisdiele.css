@@ -32,10 +32,11 @@ body {
     color: #3466c2;
 }
 #cone {
-    width: 200px;
+    width: 400px;
+    height: 400px;
 }
 #cup {
-    width: 350px;
+    width: 400px;
 }
 .next {
     height: 40px;
@@ -52,8 +53,9 @@ color: #FFEDE1;
 }
 #fruit, #milk, #bullshit {
     display: flex;
-    flex-flow: row;
+    flex-flow: row wrap;
     justify-content: center;
+
 }
 #fruit {
     background-color: #9acd3222;
@@ -116,8 +118,9 @@ button:hover{
 }
 #sauces {
     display: flex;
-    flex-flow: row;
+    flex-flow: row wrap;
     justify-content: center;
+    width: 250px;
 }
 input[type=text] {
     margin-top: 40px;
@@ -132,20 +135,16 @@ textarea[placeholder="Comment"] {
     margin-top: 40px;
 }
 #preview {
+    display: flex;
+    align-items: center;   
     width: 400px;
-}
-.iframe {
-    width: 500px;
     height: 500px;
+    flex-direction: column;
 }
-body {
-    scrollbar-3dlight-color: #3466c2;
-    scrollbar-arrow-color: #3466c2;
-    scrollbar-darkshadow-color: #3466c2;
-    scrollbar-face-color: #3466c2;
-    scrollbar-highlight-color: #3466c2;
-    scrollbar-shadow-color: #3466c2;
-    scrollbar-track-color: #3466c2;
+.Flavour {
+    height: 150px;
+    width: 150px;
+    margin-bottom: -30px;
 }
 .invis {
     display: none;
@@ -153,18 +152,171 @@ body {
 #flavorsInvis {
     display: none;
 }
+#flavors {
+    height: 500px;
+    width: 500px;
+    overflow: scroll;
+}
 #chooseVesselInvis {
     display: none;
 }
+ /*das jeweilige Styling für die Kugeln */
 #Scoop1 {
-    /*hier das jeweilige Styling für die Kugeln, ggf neue Scoop++ adden*/
+    z-index: 1;
+    position: absolute  ;
+    bottom: 381px;
 }
 #Scoop2 {
-
+    z-index: 2;
+    position: absolute;
+    bottom: 460px;
 }
 #Scoop3 {
+    z-index: 3;
+    position: absolute;
+    bottom: 530px;
+}
+img[alt = "Cone"] {
+    height: 400px;
+    width: 300px;
+    position: absolute;
+    top: 385px;
+}
+img[alt = "Cup"] {
+    height: 400px;
+    width: 300px;
+    position: absolute;
+    top: 250px;
+    z-index: 3;
+}
+#Sauce1F {
+    height: 150px;
+    z-index: 4;
+    position: absolute;
+    bottom: 350px;
+}
+#Sauce2F {
+    height: 150px;
+    z-index: 4;
+    position: absolute;
+    bottom: 430px;
+}
+#Sauce3F {
+    height: 150px;
+    z-index: 4;
+    position: absolute;
+    bottom: 500px;
+}
+img[alt = "out of stock"] {
+    width: 100px;
+}
+#toppings {
+    width: 220px;
+    display: flex;
+    flex-flow: row wrap;
+}
+@media screen and (max-width: 600px) {
+    img[alt = "Cone"] {
+    height: 300px;
+    width: 225px;
+    position: absolute;
+    top: 400px;
+    }
+    img[alt = "Cup"] {
+        height: 300px;
+        width: 225px;
+        position: absolute;
+        top: 360px;
+        z-index: 3;
+    }
+    #Scoop1 {
+        z-index: 1;
+        position: absolute;
+        bottom: 222px;
+        height: 112.5px;
+        width: 112.5px;
+    }
+    #Scoop2 {
+        z-index: 2;
+        position: absolute;
+        bottom: 280px;
+        height: 112.5px;
+        width: 112.5px;
+    }
+    #Scoop3 {
+        z-index: 3;
+        position: absolute;
+        bottom: 335px;
+        height: 112.5px;
+        width: 112.5px;
+    }
+    #sauces {
+        overflow: scroll;
+        height: 500px;
+    }
+    #Sauce1F {
+        height: 112.5px;
+        z-index: 4;
+        position: absolute;
+        bottom: 195px;
+    }
+    #Sauce2F {
+        height: 112.5px;
+        z-index: 4;
+        position: absolute;
+        bottom: 250px;
+    }
+    #Sauce3F {
+        height: 112.5px;
+        z-index: 4;
+        position: absolute;
+        bottom: 305px;
+    }
+    #toppings {
+        overflow: scroll;
+        height: 500px;
+    }
+    .parallelOrders {
+        display: block;
+    }
 
 }
-#Scoop4 {
-
+@media screen and (min-width:601px) {
+    #Scoop1 {
+        z-index: 1;
+        position: absolute;
+        bottom: 295px;
+    
+    }
+    #Scoop2 {
+        z-index: 2;
+        position: absolute;
+        bottom: 360px;
+    }
+    #Scoop3 {
+        z-index: 3;
+        position: absolute;
+        bottom: 420px;
+    }
+    #Sauce1F {
+        height: 112.5px;
+        z-index: 4;
+        position: absolute;
+        bottom: 195px;
+    }
+    #Sauce2F {
+        height: 112.5px;
+        z-index: 4;
+        position: absolute;
+        bottom: 250px;
+    }
+    #Sauce3F {
+        z-index: 4;
+        position: absolute;
+        bottom: 390px;
+    }
+    .parallelOrders {
+        display: flex;
+        justify-content: space-around;
+    }
 }
