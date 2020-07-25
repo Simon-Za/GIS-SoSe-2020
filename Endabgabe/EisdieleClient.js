@@ -3,6 +3,7 @@ var Endabgabe;
 (function (Endabgabe) {
     document.getElementById("sendButton")?.addEventListener("click", sendData);
     async function sendData() {
+        alert("Order sent");
         let formData = new FormData(document.forms[0]);
         let url = "https://gissose2020.herokuapp.com";
         let query = new URLSearchParams(formData);
