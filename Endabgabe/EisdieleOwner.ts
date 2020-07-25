@@ -34,10 +34,9 @@ namespace Endabgabe {
 
 
         console.log(bestellungen);
-        console.log(addFlavorList == null);
 
         for (let i: number = 0; i < bestellungen.length; i++) {
-            
+
             location.reload();
 
             let order: HTMLParagraphElement = document.createElement("p");
@@ -276,17 +275,18 @@ namespace Endabgabe {
 
             let deleteOrder: HTMLButtonElement = document.createElement("button");
             deleteOrder.innerHTML = "delete Order";
-            deleteOrder.setAttribute("id", bestellungen[i].id);
+            deleteOrder.setAttribute("idA", bestellungen[i].id);
             deleteOrder.addEventListener("click", deleteOrderFunc);
 
             let acceptOrder: HTMLButtonElement = document.createElement("button");
-            acceptOrder.innerHTML = "delete Order";
+            acceptOrder.innerHTML = "accept Order";
             acceptOrder.setAttribute("idA", bestellungen[i].id);
             acceptOrder.addEventListener("click", acceptOrderFunc);
 
 
 
             div.appendChild(deleteOrder);
+            div.appendChild(acceptOrder);
             div.appendChild(order);
         }
 
@@ -295,14 +295,14 @@ namespace Endabgabe {
 
 async function deleteOrderFunc(_event: Event): Promise<void> {
     let target: HTMLElement = <HTMLElement>_event.target;
-    let targetIndex: number = parseFloat(target.getAttribute("id")!);
+    let targetIndex: number = parseFloat(target.getAttribute("idA")!);
     console.log(targetIndex);
     let url: string = "https://gissose2020.herokuapp.com";
     url += "/deleteItem?" + "id=" + targetIndex;
 }
 async function acceptOrderFunc(_event: Event): Promise<void> {
     let target: HTMLElement = <HTMLElement>_event.target;
-    let targetIndex: number = parseFloat(target.getAttribute("id")!);
+    let targetIndex: number = parseFloat(target.getAttribute("idA")!);
     let url: string = "https://gissose2020.herokuapp.com";
     url += "/acceptOrder?" + "id=" + targetIndex;
 }

@@ -14,7 +14,6 @@ var Endabgabe;
         let responseText = await response.text();
         let bestellungen = JSON.parse(responseText);
         console.log(bestellungen);
-        console.log(Endabgabe.addFlavorList == null);
         for (let i = 0; i < bestellungen.length; i++) {
             location.reload();
             let order = document.createElement("p");
@@ -239,27 +238,28 @@ var Endabgabe;
             //order.innerHTML += "Topping: " + bestellungen[i].Topping + "<br>";
             let deleteOrder = document.createElement("button");
             deleteOrder.innerHTML = "delete Order";
-            deleteOrder.setAttribute("id", bestellungen[i].id);
+            deleteOrder.setAttribute("idA", bestellungen[i].id);
             deleteOrder.addEventListener("click", deleteOrderFunc);
             let acceptOrder = document.createElement("button");
-            acceptOrder.innerHTML = "delete Order";
+            acceptOrder.innerHTML = "accept Order";
             acceptOrder.setAttribute("idA", bestellungen[i].id);
             acceptOrder.addEventListener("click", acceptOrderFunc);
             div.appendChild(deleteOrder);
+            div.appendChild(acceptOrder);
             div.appendChild(order);
         }
     }
 })(Endabgabe || (Endabgabe = {}));
 async function deleteOrderFunc(_event) {
     let target = _event.target;
-    let targetIndex = parseFloat(target.getAttribute("id"));
+    let targetIndex = parseFloat(target.getAttribute("idA"));
     console.log(targetIndex);
     let url = "https://gissose2020.herokuapp.com";
     url += "/deleteItem?" + "id=" + targetIndex;
 }
 async function acceptOrderFunc(_event) {
     let target = _event.target;
-    let targetIndex = parseFloat(target.getAttribute("id"));
+    let targetIndex = parseFloat(target.getAttribute("idA"));
     let url = "https://gissose2020.herokuapp.com";
     url += "/acceptOrder?" + "id=" + targetIndex;
 }
