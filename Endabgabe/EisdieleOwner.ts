@@ -37,6 +37,8 @@ namespace Endabgabe {
         console.log(addFlavorList == null);
 
         for (let i: number = 0; i < bestellungen.length; i++) {
+            
+            location.reload();
 
             let order: HTMLParagraphElement = document.createElement("p");
             order.innerHTML += "Order: " + i + 1 + "<br>";
@@ -287,7 +289,6 @@ namespace Endabgabe {
             div.appendChild(deleteOrder);
             div.appendChild(order);
         }
-
 
     }
 }
