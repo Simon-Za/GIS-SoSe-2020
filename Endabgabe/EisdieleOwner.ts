@@ -37,7 +37,6 @@ namespace Endabgabe {
 
         for (let i: number = 0; i < bestellungen.length; i++) {
 
-            location.reload();
 
             let order: HTMLParagraphElement = document.createElement("p");
             let orderIndex: number = i + 1;
@@ -300,6 +299,7 @@ async function deleteOrderFunc(_event: Event): Promise<void> {
     console.log(targetIndex);
     let url: string = "https://gissose2020.herokuapp.com";
     url += "/deleteItem?" + "id=" + targetIndex;
+    location.reload();
 }
 async function acceptOrderFunc(_event: Event): Promise<void> {
     let target: HTMLElement = <HTMLElement>_event.target;

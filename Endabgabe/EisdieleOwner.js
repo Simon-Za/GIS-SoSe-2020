@@ -15,7 +15,6 @@ var Endabgabe;
         let bestellungen = JSON.parse(responseText);
         console.log(bestellungen);
         for (let i = 0; i < bestellungen.length; i++) {
-            location.reload();
             let order = document.createElement("p");
             let orderIndex = i + 1;
             order.innerHTML += "Order: " + orderIndex + "<br>";
@@ -257,6 +256,7 @@ async function deleteOrderFunc(_event) {
     console.log(targetIndex);
     let url = "https://gissose2020.herokuapp.com";
     url += "/deleteItem?" + "id=" + targetIndex;
+    location.reload();
 }
 async function acceptOrderFunc(_event) {
     let target = _event.target;
