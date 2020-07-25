@@ -1,6 +1,6 @@
 namespace Endabgabe {
 
-    document.getElementById("sendButon")?.addEventListener("click", sendData);
+    document.getElementById("sendButton")?.addEventListener("click", sendData);
 
 
     async function sendData(): Promise<void> {

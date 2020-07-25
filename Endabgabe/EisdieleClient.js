@@ -1,7 +1,7 @@
 "use strict";
 var Endabgabe;
 (function (Endabgabe) {
-    document.getElementById("sendButon")?.addEventListener("click", sendData);
+    document.getElementById("sendButton")?.addEventListener("click", sendData);
     async function sendData() {
         let formData = new FormData(document.forms[0]);
         let url = "https://gissose2020.herokuapp.com";
