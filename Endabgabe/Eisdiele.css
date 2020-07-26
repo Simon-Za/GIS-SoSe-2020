@@ -98,6 +98,11 @@ button:hover{
     flex-flow: row;
     justify-content: space-around;
 }
+.parallelOrders {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
 .flavor>img {
     width: 80px;
 }
@@ -180,13 +185,13 @@ img[alt = "Cone"] {
     height: 400px;
     width: 300px;
     position: absolute;
-    top: 385px;
+    top: 305px;
 }
 img[alt = "Cup"] {
     height: 400px;
     width: 300px;
     position: absolute;
-    top: 350px;
+    top: 250px;
     z-index: 3;
 }
 #Sauce1F {

@@ -174,7 +174,7 @@ namespace Endabgabe {
         addTopping.setAttribute("toppingIndex", index.toString());
         //out of stock --> (Mein Designer war zu beschäftigt um schnell genug zu arbeiten, habe also keine Grafiken,
         // aber generell würde es funktionieren, hab das deswegen drin gelassen)
-        
+
         //addTopping.addEventListener("click", addToppingFunc);
     }
 
