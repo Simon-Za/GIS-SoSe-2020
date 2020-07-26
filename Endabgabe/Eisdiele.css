@@ -281,7 +281,7 @@ img[alt = "out of stock"] {
     }
 
 }
-@media screen and (min-width:601px) {
+@media screen and (min-width:601px) and (max-width: 1024) {
     #Scoop1 {
         z-index: 1;
         position: absolute;
