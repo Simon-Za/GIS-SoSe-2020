@@ -249,7 +249,7 @@ var Endabgabe;
             div.appendChild(order);
         }
     }
-    function deleteOrderFunc(_event) {
+    async function deleteOrderFunc(_event) {
         let target = _event.target;
         let targetIndex = parseFloat(target.getAttribute("idA"));
         console.log(targetIndex);
@@ -265,6 +265,8 @@ var Endabgabe;
         let url = "https://gissose2020.herokuapp.com";
         url += "/acceptOrder?" + "id=" + targetIndex;
         fetch(url);
+        location.reload();
+        getData();
     }
 })(Endabgabe || (Endabgabe = {}));
 //# sourceMappingURL=EisdieleOwner.js.map

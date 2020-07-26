@@ -291,7 +291,7 @@ namespace Endabgabe {
         }
 
     }
-    function deleteOrderFunc(_event: Event): void {
+    async function deleteOrderFunc(_event: Event): void {
         let target: HTMLElement = <HTMLElement>_event.target;
         let targetIndex: number = parseFloat(target.getAttribute("idA")!);
         console.log(targetIndex);
@@ -307,6 +307,8 @@ namespace Endabgabe {
         let url: string = "https://gissose2020.herokuapp.com";
         url += "/acceptOrder?" + "id=" + targetIndex;
         fetch(url);
+        location.reload();
+        getData();
     }
 }
 
