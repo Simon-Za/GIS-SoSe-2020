@@ -249,19 +249,20 @@ var Endabgabe;
             div.appendChild(order);
         }
     }
+    async function deleteOrderFunc(_event) {
+        let target = _event.target;
+        let targetIndex = parseFloat(target.getAttribute("idA"));
+        console.log(targetIndex);
+        let url = "https://gissose2020.herokuapp.com";
+        url += "/deleteItem?" + "id=" + targetIndex;
+        location.reload();
+        getData();
+    }
+    async function acceptOrderFunc(_event) {
+        let target = _event.target;
+        let targetIndex = parseFloat(target.getAttribute("idA"));
+        let url = "https://gissose2020.herokuapp.com";
+        url += "/acceptOrder?" + "id=" + targetIndex;
+    }
 })(Endabgabe || (Endabgabe = {}));
-async function deleteOrderFunc(_event) {
-    let target = _event.target;
-    let targetIndex = parseFloat(target.getAttribute("idA"));
-    console.log(targetIndex);
-    let url = "https://gissose2020.herokuapp.com";
-    url += "/deleteItem?" + "id=" + targetIndex;
-    location.reload();
-}
-async function acceptOrderFunc(_event) {
-    let target = _event.target;
-    let targetIndex = parseFloat(target.getAttribute("idA"));
-    let url = "https://gissose2020.herokuapp.com";
-    url += "/acceptOrder?" + "id=" + targetIndex;
-}
 //# sourceMappingURL=EisdieleOwner.js.map

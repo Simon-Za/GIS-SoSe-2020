@@ -291,19 +291,20 @@ namespace Endabgabe {
         }
 
     }
+    async function deleteOrderFunc(_event: Event): Promise<void> {
+        let target: HTMLElement = <HTMLElement>_event.target;
+        let targetIndex: number = parseFloat(target.getAttribute("idA")!);
+        console.log(targetIndex);
+        let url: string = "https://gissose2020.herokuapp.com";
+        url += "/deleteItem?" + "id=" + targetIndex;
+        location.reload();
+        getData();
+    }
+    async function acceptOrderFunc(_event: Event): Promise<void> {
+        let target: HTMLElement = <HTMLElement>_event.target;
+        let targetIndex: number = parseFloat(target.getAttribute("idA")!);
+        let url: string = "https://gissose2020.herokuapp.com";
+        url += "/acceptOrder?" + "id=" + targetIndex;
+    }
 }
 
-async function deleteOrderFunc(_event: Event): Promise<void> {
-    let target: HTMLElement = <HTMLElement>_event.target;
-    let targetIndex: number = parseFloat(target.getAttribute("idA")!);
-    console.log(targetIndex);
-    let url: string = "https://gissose2020.herokuapp.com";
-    url += "/deleteItem?" + "id=" + targetIndex;
-    location.reload();
-}
-async function acceptOrderFunc(_event: Event): Promise<void> {
-    let target: HTMLElement = <HTMLElement>_event.target;
-    let targetIndex: number = parseFloat(target.getAttribute("idA")!);
-    let url: string = "https://gissose2020.herokuapp.com";
-    url += "/acceptOrder?" + "id=" + targetIndex;
-}
