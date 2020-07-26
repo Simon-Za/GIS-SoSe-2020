@@ -291,7 +291,7 @@ namespace Endabgabe {
         }
 
     }
-    async function deleteOrderFunc(_event: Event): void {
+    async function deleteOrderFunc(_event: Event): Promise<void> {
         let target: HTMLElement = <HTMLElement>_event.target;
         let targetIndex: number = parseFloat(target.getAttribute("idA")!);
         console.log(targetIndex);
