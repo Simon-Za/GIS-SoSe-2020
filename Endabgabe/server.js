@@ -57,7 +57,7 @@ var Endabgabe;
                 let query = url.query;
                 let id = query["_id"];
                 let mongoId = new Mongo.ObjectID(id);
-                orders.update({ "_id": mongoId }, { "Comment": "accepted" });
+                orders.update({ "_id": mongoId }, { $set: { "Comment": "accepted" } });
             }
         }
         console.log("beep boop"); //Die URL wird auf die Seite geschrieben

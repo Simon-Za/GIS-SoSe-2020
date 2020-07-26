@@ -79,7 +79,7 @@ namespace Endabgabe {
                 let query: ParsedUrlQuery = url.query;
                 let id: string = <string>query["_id"];
                 let mongoId: Mongo.ObjectID = new Mongo.ObjectID(id);
-                orders.update({ "_id": mongoId }, { "Comment": "accepted" });
+                orders.update({ "_id": mongoId }, {$set: { "Comment": "accepted" }});
             }
 
 
