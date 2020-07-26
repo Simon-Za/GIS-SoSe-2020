@@ -6,11 +6,11 @@ namespace Endabgabe {
         address: string;
         Comment: string;
         Vessel: string;
+        Sauce: string;
+        Topping: string;
         Flavor1: string;
         Flavor2: string;
         Flavor3: string;
-        Sauce: string;
-        Topping: string;
     }
 
     document.getElementById("getButton")?.addEventListener("click", getData);
@@ -293,7 +293,7 @@ namespace Endabgabe {
     }
     async function deleteOrderFunc(_event: Event): Promise<void> {
         let target: HTMLElement = <HTMLElement>_event.target;
-        let targetIndex: number = parseFloat(target.getAttribute("idA")!);
+        let targetIndex: string =  target.getAttribute("idA")!;
         console.log(targetIndex);
         let url: string = "https://gissose2020.herokuapp.com";
         url += "/deleteItem?" + "_id=" + targetIndex;
@@ -303,7 +303,7 @@ namespace Endabgabe {
     }
     async function acceptOrderFunc(_event: Event): Promise<void> {
         let target: HTMLElement = <HTMLElement>_event.target;
-        let targetIndex: number = parseFloat(target.getAttribute("idA")!);
+        let targetIndex: string = target.getAttribute("idA")!;
         let url: string = "https://gissose2020.herokuapp.com";
         url += "/acceptOrder?" + "_id=" + targetIndex;
         fetch(url);

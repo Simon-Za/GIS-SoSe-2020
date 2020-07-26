@@ -251,7 +251,7 @@ var Endabgabe;
     }
     async function deleteOrderFunc(_event) {
         let target = _event.target;
-        let targetIndex = parseFloat(target.getAttribute("idA"));
+        let targetIndex = target.getAttribute("idA");
         console.log(targetIndex);
         let url = "https://gissose2020.herokuapp.com";
         url += "/deleteItem?" + "_id=" + targetIndex;
@@ -261,7 +261,7 @@ var Endabgabe;
     }
     async function acceptOrderFunc(_event) {
         let target = _event.target;
-        let targetIndex = parseFloat(target.getAttribute("idA"));
+        let targetIndex = target.getAttribute("idA");
         let url = "https://gissose2020.herokuapp.com";
         url += "/acceptOrder?" + "_id=" + targetIndex;
         fetch(url);
