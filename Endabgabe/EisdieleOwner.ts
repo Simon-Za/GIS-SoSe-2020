@@ -291,12 +291,13 @@ namespace Endabgabe {
         }
 
     }
-    async function deleteOrderFunc(_event: Event): Promise<void> {
+    function deleteOrderFunc(_event: Event): void {
         let target: HTMLElement = <HTMLElement>_event.target;
         let targetIndex: number = parseFloat(target.getAttribute("idA")!);
         console.log(targetIndex);
         let url: string = "https://gissose2020.herokuapp.com";
         url += "/deleteItem?" + "id=" + targetIndex;
+        fetch(url);
         location.reload();
         getData();
     }
@@ -305,6 +306,7 @@ namespace Endabgabe {
         let targetIndex: number = parseFloat(target.getAttribute("idA")!);
         let url: string = "https://gissose2020.herokuapp.com";
         url += "/acceptOrder?" + "id=" + targetIndex;
+        fetch(url);
     }
 }
 
