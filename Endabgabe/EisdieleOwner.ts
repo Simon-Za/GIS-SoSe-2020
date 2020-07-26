@@ -1,7 +1,7 @@
 namespace Endabgabe {
 
     interface Bestellung {
-        id: string;
+        _id: string;
         name: string;
         address: string;
         Comment: string;
@@ -275,12 +275,12 @@ namespace Endabgabe {
 
             let deleteOrder: HTMLButtonElement = document.createElement("button");
             deleteOrder.innerHTML = "delete Order";
-            deleteOrder.setAttribute("idA", bestellungen[i].id);
+            deleteOrder.setAttribute("idA", bestellungen[i]._id);
             deleteOrder.addEventListener("click", deleteOrderFunc);
 
             let acceptOrder: HTMLButtonElement = document.createElement("button");
             acceptOrder.innerHTML = "accept Order";
-            acceptOrder.setAttribute("idA", bestellungen[i].id);
+            acceptOrder.setAttribute("idA", bestellungen[i]._id);
             acceptOrder.addEventListener("click", acceptOrderFunc);
 
 
@@ -296,7 +296,7 @@ namespace Endabgabe {
         let targetIndex: number = parseFloat(target.getAttribute("idA")!);
         console.log(targetIndex);
         let url: string = "https://gissose2020.herokuapp.com";
-        url += "/deleteItem?" + "id=" + targetIndex;
+        url += "/deleteItem?" + "_id=" + targetIndex;
         fetch(url);
         location.reload();
         getData();
@@ -305,7 +305,7 @@ namespace Endabgabe {
         let target: HTMLElement = <HTMLElement>_event.target;
         let targetIndex: number = parseFloat(target.getAttribute("idA")!);
         let url: string = "https://gissose2020.herokuapp.com";
-        url += "/acceptOrder?" + "id=" + targetIndex;
+        url += "/acceptOrder?" + "_id=" + targetIndex;
         fetch(url);
         location.reload();
         getData();
