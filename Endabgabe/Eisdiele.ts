@@ -1,5 +1,8 @@
 namespace Endabgabe {
 
+    //Link zum Meme: https://simon-za.github.io/GIS-SoSe-2020/Endabgabe/Bilder/GiS_Meme.png
+
+
     let counterF: number;
     if (!localStorage.getItem("counter")) {
         counterF = 0;
