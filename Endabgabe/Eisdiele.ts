@@ -8,8 +8,6 @@ namespace Endabgabe {
         counterF = parseInt(localStorage.getItem("counter")!);
     }
 
-
-    //window.addEventListener("onload", darstellungLaden);
     darstellungLaden();
 
     function darstellungLaden(): void {
@@ -117,7 +115,7 @@ namespace Endabgabe {
         flavorImg.setAttribute("class", "Flavour");
         console.log(flavorImg);
         document.getElementById("preview")!.appendChild(flavorImg);
-        /*iwas mit local storage kommt hier noch rein*/
+     
         localStorage.setItem("Flavor" + counterF, flavorIndex.toString());
         if (counterF < 3) {
             localStorage.setItem("Flavor3", "null");
@@ -130,8 +128,6 @@ namespace Endabgabe {
 
     //Soßen Indizes geben und eventListener adden
     const addSauceList: NodeListOf<Element> = document.querySelectorAll(".addSauce");
-    //console.log(addSauceList);
-
 
     for (let index: number = 0; index < addSauceList.length; index++) {
         let addSauce: Element = addSauceList[index];
@@ -164,7 +160,6 @@ namespace Endabgabe {
         }
 
         document.getElementById("preview")?.appendChild(sauceImg);
-        /*iwas mit local storage kommt hier noch rein*/
         localStorage.setItem("Sauce", sauceIndex.toString());
     }
 
@@ -177,7 +172,10 @@ namespace Endabgabe {
     for (let index: number = 0; index < addToppingsList.length; index++) {
         let addTopping: Element = addToppingsList[index];
         addTopping.setAttribute("toppingIndex", index.toString());
-        //out of stock --> //addTopping.addEventListener("click", addToppingFunc);
+        //out of stock --> (Mein Designer war zu beschäftigt um schnell genug zu arbeiten, habe also keine Grafiken,
+        // aber generell würde es funktionieren, hab das deswegen drin gelassen)
+        
+        //addTopping.addEventListener("click", addToppingFunc);
     }
 
     /* let counterT: number;

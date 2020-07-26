@@ -8,7 +8,6 @@ var Endabgabe;
     else {
         counterF = parseInt(localStorage.getItem("counter"));
     }
-    //window.addEventListener("onload", darstellungLaden);
     darstellungLaden();
     function darstellungLaden() {
         /*console.log("beepboop"); */
@@ -98,7 +97,6 @@ var Endabgabe;
         flavorImg.setAttribute("class", "Flavour");
         console.log(flavorImg);
         document.getElementById("preview").appendChild(flavorImg);
-        /*iwas mit local storage kommt hier noch rein*/
         localStorage.setItem("Flavor" + counterF, flavorIndex.toString());
         if (counterF < 3) {
             localStorage.setItem("Flavor3", "null");
@@ -110,7 +108,6 @@ var Endabgabe;
     }
     //Soßen Indizes geben und eventListener adden
     const addSauceList = document.querySelectorAll(".addSauce");
-    //console.log(addSauceList);
     for (let index = 0; index < addSauceList.length; index++) {
         let addSauce = addSauceList[index];
         addSauce.setAttribute("sauceIndex", index.toString());
@@ -137,7 +134,6 @@ var Endabgabe;
             sauceImg.setAttribute("id", "Sauce3F");
         }
         document.getElementById("preview")?.appendChild(sauceImg);
-        /*iwas mit local storage kommt hier noch rein*/
         localStorage.setItem("Sauce", sauceIndex.toString());
     }
     //Toppings Indizes geben und eventListener adden
@@ -146,7 +142,9 @@ var Endabgabe;
     for (let index = 0; index < addToppingsList.length; index++) {
         let addTopping = addToppingsList[index];
         addTopping.setAttribute("toppingIndex", index.toString());
-        //out of stock --> //addTopping.addEventListener("click", addToppingFunc);
+        //out of stock --> (Mein Designer war zu beschäftigt um schnell genug zu arbeiten, habe also keine Grafiken,
+        // aber generell würde es funktionieren, hab das deswegen drin gelassen)
+        //addTopping.addEventListener("click", addToppingFunc);
     }
     /* let counterT: number;
     function addToppingFunc(_event: Event): void {

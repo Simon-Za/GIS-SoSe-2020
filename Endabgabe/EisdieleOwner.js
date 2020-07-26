@@ -3,7 +3,6 @@ var Endabgabe;
 (function (Endabgabe) {
     document.getElementById("getButton")?.addEventListener("click", getData);
     let main = document.getElementById("main");
-    //let counter: number = parseInt(localStorage.getItem("counter")!);
     let div = document.createElement("div");
     div.setAttribute("id", "Bestellungen");
     main.appendChild(div);

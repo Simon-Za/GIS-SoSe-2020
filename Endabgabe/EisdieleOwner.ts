@@ -15,13 +15,11 @@ namespace Endabgabe {
 
     document.getElementById("getButton")?.addEventListener("click", getData);
     let main: HTMLElement = document.getElementById("main") as HTMLElement;
-    //let counter: number = parseInt(localStorage.getItem("counter")!);
-
 
     let div: HTMLElement = document.createElement("div");
     div.setAttribute("id", "Bestellungen");
     main.appendChild(div);
-
+    
 
     async function getData(): Promise<void> {
 
